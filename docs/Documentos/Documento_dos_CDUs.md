@@ -3,6 +3,8 @@
 | 19/08/2022 | 1.0 | - | Matheus Arthur / Joana Fernandes / Alice Lima / Manrick Lázaro |
 | 29/10/2022 | 1.1 | adicionando prioridade dos casos de uso | Manrick Lázaro |
 
+# Prioridade dos Casos de uso
+
 | CDU | Prioridade |
 | --- | ---------- |
 | 01 | ⭐⭐⭐⭐⭐ |
