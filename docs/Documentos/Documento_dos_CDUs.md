@@ -4,6 +4,7 @@
 | 29/10/2022 | 1.1 | adicionando prioridade dos casos de uso | Manrick Lázaro |
 
 | CDU | Prioridade |
+| --- | ---------- |
 | 01 | ⭐⭐⭐⭐⭐ |
 | 02 | ⭐⭐⭐⭐ | 
 | 03 | ⭐⭐⭐ |
