@@ -1,24 +1,42 @@
-# IFMAP
+# IFMap
 
->Testando um template para servir de base para o PDS
+### Template de Testes
+![Página home](./home.jpg)
 
-<img src="logo.png" width="200" height="200" />
+### Logo do Projeto
+![Página home](./logo.png)
 
->Inserir uma logo para o projeto
+### Descrição
+O IFMap é um sistema que busca fazer uma mapeação do IFRN, com o objetivo de 
+guiar usuarios para determinados locais.
 
->Inserir pequena descrição do projeto
+# Tecnologias Utilizadas no Desenvolvimento
 
-# Tecnologias Utilizadas
+- Figma
+- Django
+- Github
+- Python
+- Canvas 
+- Photopea
+- VSCode
+- Draw.IO
+- Astah
 
->Enumerar as tecnoligas utilzadas no projeto
+# Guia do Desenvolvedor
 
+[LINK para o guia do desenvolvedor do projeto IFMap](./docs/desenvolvedor/guia_desenvolvedor.md).
 
-# Instalação
+# Canais de Comunicação
 
->Descrever os comandos iniciais para começar a colaborar com o desenvolvimento do projeto
+- Dicord
+- Whatsapp
 
+# Membros 
 
-
-# Documentação
-
->Link para os documentos do projeto
+- Alice de Lima Silva
+- Giovanna Batista de Melo 
+- Joana Darc Fernandes Silva
+- Manrick Lázaro dos Santos Silva
+- Matheus Arthur Lúcio da Rocha 
+- Tiago de Assunção Cruz 
+- Virginia Claudia de Lima Menezes 

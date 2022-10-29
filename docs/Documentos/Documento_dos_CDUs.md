@@ -1,8 +1,17 @@
-# CDU 01 - Ser guiado até um ambiente (passo a passo)
-
 | Data | Versão | Descrição | Autor |
 | ---- | ------- | ---------- | ------ |
-|  01/08/2022 | 1.0 | versão inicial | Manrick Lázaro |
+| 19/08/2022 | 1.0 | - | Matheus Arthur / Joana Fernandes / Alice Lima / Manrick Lázaro |
+| 29/10/2022 | 1.1 | adicionando prioridade dos casos de uso | Manrick Lázaro |
+
+| CDU | Prioridade |
+| 01 | ⭐⭐⭐⭐⭐ |
+| 02 | ⭐⭐⭐⭐ | 
+| 03 | ⭐⭐⭐ |
+| 04 | ⭐ |
+| 05 | ⭐⭐⭐ |
+| 06 | ⭐ |
+
+## CDU 01 - Ser guiado por Foto
 
 *Resumo*: tem como objetivo guiar o usuário até um local de interesse utilizando fotos e uma descrição textual.
 
@@ -12,7 +21,7 @@
 
 *Pós-condições*
 
-## Fluxos de eventos
+### Fluxos de eventos
 
 *principal*
 | Usuário | Sistema |
@@ -35,11 +44,7 @@
 <br/>
 <br/>
 
-# CDU 02 - Buscar Ambiente
-
-Data  | Versão  | Descrição   | Autor
---------- | ------------  | ------------------  | ----------
-06/08/22  | 1.0  | Versão inicial  | Joana Fernandes 
+## CDU 02 - Buscar Ambiente
 
 *Resumo*: Tem como intenção ajudar o usuário a buscar e encontrar um determinado local.
 
@@ -49,7 +54,7 @@ Data  | Versão  | Descrição   | Autor
 
 *Pós-Condições*:
 
-## Fluxos de Eventos
+### Fluxos de Eventos
 *Principal*:
 
 |Usuário | Sistema|
@@ -66,13 +71,7 @@ Data  | Versão  | Descrição   | Autor
 <br/>
 <br/>
 
-# CDU 03 - Listagem de Diretorias
-| Data | Versão | Descrição | Autor |
-| ------- | --------- | -------------- | -------- |
-|  01/08/2022 | 1.0 | Versão inicial | Manrick Lázaro |
-| 19/08/2022 | 1.1 | - | Matheus Arthur |
-| 19/08/2022 | 1.2 | - | Alice Lima |
-| 19/08/2022 | 1.3 | - | Manrick lázaro |
+## CDU 03 - Listar Diretorias
 
 *Resumo*: Tem como objetivo exibir para o usuário a lista de diretorias cadastradas. 
 
@@ -82,7 +81,7 @@ Pré-condições:
 
 Pós condições
 
-## Fluxo de eventos:
+### Fluxo de eventos:
 
 *Principal*
 
@@ -98,12 +97,7 @@ Pós condições
 <br/>
 <br/>
 
-# CDU 04 - Exibir Mapa de um Ambiente
-| Data | Versão | Descrição | Autor |
-| ------- | --------- | -------------- | -------- |
-| 19/08/2022 | 1.2 | - | Matheus Arthur |
-| 19/08/2022 | 1.3 | - | Alice Lima
-| 19/08/2022 |  1.4 | - | Manrick Lázaro |
+## CDU 04 - Exibir Mapa de um Ambiente
 
 *Resumo*: Tem como objetivo exibir para o usuário o mapa de um ambiente escolhido de uma diretoria.
 
@@ -113,7 +107,7 @@ Pré-condições:
 
 Pós condições
 
-## Fluxo de eventos:
+### Fluxo de eventos:
 
 *Principal*
 
@@ -129,11 +123,7 @@ Pós condições
 <br/>
 <br/>
 
-# CDU 05 - Listagem de Ambientes
-| Data | Versão | Descrição | Autor |
-| ------- | --------- | -------------- | -------- |
-| 19/08/2022 | 1.1 | - | Matheus Arthur |
-| 19/08/2022 | 1.2 | - | Alice Lima |
+## CDU 05 - Listar Ambientes
 
 *Resumo*: Tem como objetivo exibir para o usuário a lista de ambientes encontrados em cada diretoria.
 
@@ -143,7 +133,7 @@ Pré-condições:
 
 Pós condições
 
-## Fluxo de eventos:
+### Fluxo de eventos:
 
 *Principal*
 
@@ -163,12 +153,7 @@ Pós condições
 <br/>
 <br/>
 
-# CDU 06 - Ser Guiado por Vídeo
-| Data | Versão | Descrição | Autor |
-| ------- | --------- | -------------- | -------- |
-|  01/08/2022 | 1.0 | Versão inicial | Manrick Lázaro |
-| 19/08/2022 | 1.2 | - | Matheus Arthur |
-| 19/08/2022 | 1.3 | - | Alice Lima |
+## CDU 06 - Ser Guiado por Vídeo
 
 *Resumo*: Tem como objetivo guiar o usuário até um local de interesse utilizando vídeos.
 
@@ -178,7 +163,7 @@ Pré-condições:
 
 Pós condições
 
-## Fluxo de eventos:
+### Fluxo de eventos:
 
 *Principal*
 
