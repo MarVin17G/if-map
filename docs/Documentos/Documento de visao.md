@@ -1,16 +1,18 @@
 # Documento de Visão
 
 ## Histórico da Revisão
+
 | Data | Versão | Descrição | Autor |
 |------|--------|-----------|-------|
 | 29/05/2022 | 1.0 | Criação do documento de visão |  Manrick Lázaro |
-| 12/06/2022 | 1,1 | atualização do documento de visão. | Virginia Menezes |
-| 29/06/2022 | 1,2 | atualização do documento de visão. | Giovanna Melo |
+| 12/06/2022 | 1.1 | atualização do documento de visão. | Virginia Menezes |
+| 29/06/2022 | 1.2 | atualização do documento de visão. | Giovanna Melo |
+| 29/10/2022 | 1.3 | Correção de alguns tópicos | Virginia Menezes / Manrick Lázaro |
 
 ## 1. Projeto: _IFMap_
 
 ## 2. Descrição do problema
-O problema de falta de um mapa ou de guias claros de referências afeta frequentadores do IFRN natal central, dificultando de encontrar salas, diretorias, auditórios e muitas vezes atrasando o frequentador de chegar no seu lugar de interesse. uma boa solução para resolvermos esse problema seria criar um sistema online que contenha um mapa do instituto e que possibilite guiar o usuário até o seu destino no campus. 
+A falta de um mapa ou de guias claros de referências afeta frequentadores do IFRN natal central, dificultando de encontrar salas, diretorias, auditórios e muitas vezes atrasando o frequentador de chegar no seu lugar de interesse. Uma  solução para resolvermos esse problema seria criar um sistema online que possibilite guiar o usuário até o seu destino no campus. 
 
 ## 3. Descrição dos usuários
 | Nome | Ambiente | Responsabilidades |
@@ -22,7 +24,7 @@ O problema de falta de um mapa ou de guias claros de referências afeta frequent
 ·    Mapa virtual da UFRN - https://campusvirtual.ufrn.br/ - Ferramenta para ajudar os usuários a encontrar os espaços da Universidade e conhecer um pouco da história da instituição a partir de suas edificações. O Campus Virtual é constituído por quatro seções principais: Mapa, Memória, Galeria e Download. No mapa, os usuários podem buscar informações de localização, serviços e contato de cada unidade por meio de uma busca com palavras-chave.
 
 ## 5. Escopo
-É um sistema que possuirá um mapa do IFRN. Seu principal objetivo é ajudar o usuário a se localizar pelo campus e encontrar um destino desejado, possuindo um sistema que pode guia-lo até um ponto de referência.
+É um sistema que possuirá um guia virtual do IFRN. Seu principal objetivo é ajudar o usuário a se localizar pelo campus e encontrar um destino desejado, possuindo um sistema que pode guia-lo até um ponto de referência.
 
 ## 6. Requisitos FUNCIONAIS
 | Código | Nome |
@@ -32,7 +34,6 @@ O problema de falta de um mapa ou de guias claros de referências afeta frequent
 | F03    | Mostrar mapa                                     |
 | F04    | Exibir detalhes dos pontos de referência         |
 | F05    | Cadastrar novos guias                            |
-| F06    | Cadastrar novos usuários                         |
 
 ## 7. Requisitos NÃO-FUNCIONAIS
 | Código | Nome | Categoria | Classificação |
