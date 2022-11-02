@@ -21,6 +21,9 @@ guiar usuarios para determinados locais.
 - VSCode
 - Draw.IO
 - Astah
+- React
+- Express
+- Java Script
 
 # Guia do Desenvolvedor
 
@@ -33,10 +36,8 @@ guiar usuarios para determinados locais.
 
 # Membros 
 
-- Alice de Lima Silva
 - Giovanna Batista de Melo 
-- Joana Darc Fernandes Silva
+- Joana Darc Fernandes 
+- Lucas Felipe Santos
 - Manrick Lázaro dos Santos Silva
-- Matheus Arthur Lúcio da Rocha 
-- Tiago de Assunção Cruz 
 - Virginia Claudia de Lima Menezes 
