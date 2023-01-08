@@ -1,9 +1,10 @@
 CREATE DATABASE IF NOT EXISTS ifmapdb;
+USE ifmapdb;
 CREATE TABLE Gestores (
 	gestorId INT NOT NULL AUTO_INCREMENT,
 	nome VARCHAR(50) NOT NULL,
 	email VARCHAR(60) NOT NULL,
-	matricula VARCHAR(12) NOT NULL,
+	matricula VARCHAR(20) NOT NULL,
 	senha VARCHAR(50) NOT NULL,
 	PRIMARY KEY(gestorId)
 );
@@ -16,10 +17,10 @@ CREATE TABLE Diretorias (
 );
 CREATE TABLE Ambientes (
 	ambienteId INT NOT NULL AUTO_INCREMENT,
-	nome VARCHAR(8) NOT NULL,
+	nome VARCHAR(50) NOT NULL,
 	diretoriaFk INT NOT NULL,
-	mapaAmbiente MEDIUMBLOB NOT NULL,
-	videoRota VARCHAR(100) NOT NULL,
+	mapaAmbiente MEDIUMBLOB,
+	videoRota VARCHAR(100),
 	PRIMARY KEY(ambienteId),
 	FOREIGN KEY(diretoriaFk) REFERENCES Diretorias(diretoriaId)
 );
