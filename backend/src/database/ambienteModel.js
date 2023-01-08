@@ -2,54 +2,55 @@ const db = require('./connection');
 
 const create = async (nome, diretoriaFk, mapaAmbiente, videoRota) => {
   const query =
-    'insert into ifmap.Ambientes (name, diretoriaFk) values (?, ?);';
-  const [rows] = await db.execute(query, [name, diretoriaFk]);
+    'insert into ifmapdb.Ambientes (nome, diretoriaFk) values (?, ?);';
+  const [rows] = await db.execute(query, [nome, diretoriaFk]);
   return {
     id: rows.insertId,
-    name,
+    nome,
     diretoriaFk,
   };
 };
 
 const getAll = async () => {
-  const [rows] = await db.execute('select * from ifmap.Ambientes;');
+  const [rows] = await db.execute('select * from ifmapdb.Ambientes;');
   return rows;
 };
 
 const getById = async (id) => {
   const [rows] = await db.execute(
-    'select * from IFMapDB.Ambientes where id = ?;',
+    'select * from ifmapdb.Ambientes where id = ?;',
     [id]
   );
   return rows[0];
 };
 
-const update = async (ambientId, nome, diretoriaFk) => {
+const update = async (ambienteId, nome, diretoriaFk) => {
   await db.execute(
     `
-  update IFMapDB.ambientes
-  set name = ?, quantity = ?
-  where id = ?;
+  update ifmapdb.ambientes
+  set nome = ?, diretoriaFk = ?
+  where ambienteId = ?;
   `,
-    [name, quantity, id]
+    [nome, diretoriaFk, ambienteId]
   );
-  // gambi
-  const idNumber = parseInt(id, 10);
+  const idNumber = parseInt(ambienteId, 10);
   return {
     id: idNumber,
-    name,
-    quantity,
+    nome,
+    diretoriaFk,
   };
 };
 
-const remove = async (id) => {
-  await db.execute('delete from IFMapDB.ambientes WHERE id = ?', [id]);
+const remove = async (ambienteId) => {
+  await db.execute('delete from ifmapdb.Ambientes WHERE ambienteId = ?', [
+    ambienteId,
+  ]);
 };
 
-const getByName = async (name) => {
+const getByName = async (nome) => {
   const [rows] = await db.query(
-    'select * from IFMapDB.ambientes WHERE name = ?',
-    [name]
+    'select * from ifmabdb.Ambientes WHERE nome = ?',
+    [nome]
   );
   return rows;
 };
