@@ -23,8 +23,8 @@ class App {
   }
 
   private routes(): void {
-    
-    this.app.use('/login', loginRouter);
+
+    this.app.use('/login', loginRouters);
     this.app.use('/ambientes', ambienteRouters);
   }
 

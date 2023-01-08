@@ -1,5 +1,5 @@
 import ambienteControllers from './ambienteControllers';
-import loginControllers from './loginController';
+import LoginControllers from './loginController';
 
 
-export { ambienteControllers, loginControllers };
+export { ambienteControllers, LoginControllers };
