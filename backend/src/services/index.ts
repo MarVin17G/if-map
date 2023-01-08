@@ -1,3 +1,4 @@
 
 import ambienteServices from './ambienteServices';
-export { ambienteServices };
+import loginServices from './loginService';
+export { ambienteServices, loginServices };

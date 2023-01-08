@@ -1,29 +1,30 @@
 const db = require('./connection');
 
-const create = async (name) => {
-  const query = 'insert into IFMapDB.ambientes (name) values (?);';
-  const [rows] = await db.execute(query, [name]);
+const create = async (nome, diretoriaFk, mapaAmbiente, videoRota) => {
+  const query =
+    'insert into ifmap.Ambientes (name, diretoriaFk) values (?, ?);';
+  const [rows] = await db.execute(query, [name, diretoriaFk]);
   return {
     id: rows.insertId,
     name,
-    quantity,
+    diretoriaFk,
   };
 };
 
 const getAll = async () => {
-  const [rows] = await db.execute('select * from IFMapDB.ambientes;');
+  const [rows] = await db.execute('select * from ifmap.Ambientes;');
   return rows;
 };
 
 const getById = async (id) => {
   const [rows] = await db.execute(
-    'select * from IFMapDB.ambientes where id = ?;',
+    'select * from IFMapDB.Ambientes where id = ?;',
     [id]
   );
   return rows[0];
 };
 
-const update = async (id, name, quantity) => {
+const update = async (ambientId, nome, diretoriaFk) => {
   await db.execute(
     `
   update IFMapDB.ambientes

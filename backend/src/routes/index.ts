@@ -1,3 +1,3 @@
 import ambienteRouters from './ambienteRoutes';
-
-export { ambienteRouters };
+import loginRouters from './loginRoutes'
+export { ambienteRouters, loginRouters };

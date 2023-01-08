@@ -1,5 +1,5 @@
 import * as express from 'express';
-import { ambienteRouters } from './routes';
+import { loginRouters, ambienteRouters } from './routes';
 
 class App {
   public app: express.Express;
@@ -23,6 +23,8 @@ class App {
   }
 
   private routes(): void {
+    
+    this.app.use('/login', loginRouter);
     this.app.use('/ambientes', ambienteRouters);
   }
 
