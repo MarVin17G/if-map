@@ -1,0 +1,93 @@
+.footerDiv {
+    background-color: #120f2d;
+    padding-top: 100px;
+    padding-left: 4%;
+    padding-right: 4%;
+    height: 450px;
+}
+
+.LogoProjeto {
+    height: 150px;
+    width: 50%;
+    border: 1px solid #fff;
+}
+
+.ifmap {
+    color: #fff;
+    font-size: calc(1.375rem + 1.5vw);;
+}
+
+.if_text {
+    color: rgba(255, 255, 255, 0.5);
+    line-height: 1.5;
+    font-size: 1.2rem;
+    margin-top: 5px;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+.contact {
+    flex-wrap: wrap;
+    display: flex;
+    box-sizing: border-box;
+    height: 250px;
+    margin-top: 60px;
+}
+.contact h3 {
+    font-size: calc(1.3rem + 0.6vw);
+    color: #fff;
+}
+
+ul li {
+    list-style: none;
+}
+
+.ende {
+    color: rgba(255, 255, 255, 0.5);
+    width: 30%;
+    margin-right: 30px;
+}
+.ende address {
+    margin-top: 20px
+}
+
+.social_midia {
+    margin-top: 20px;
+    font-size: calc(1.3rem + 0.6vw);
+}
+.social_midia a {
+    margin-right: 20px;
+    color: #fff;
+}
+
+.creators {
+    width: 20%;
+}
+.creators a {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 1rem;
+    background-color: transparent;
+}
+.creators a:hover {
+    border-bottom: 0.5px solid rgba(255, 255, 255, 0.5);
+}
+
+.cprt {
+    border-top: 0.1px solid rgba(255, 255, 255, 0.1);
+    background-color: #120f2d;
+    height: 40px;
+    padding-top: 15px;
+}
+.cprt p {
+    margin-left: 4%;
+    color:rgba(255, 255, 255, 0.5)
+}
+.cprt a {
+    color: #fff;
+}
+.cprt a:hover {
+    border-bottom: 0.5px solid rgba(255, 255, 255, 0.5);
+}
