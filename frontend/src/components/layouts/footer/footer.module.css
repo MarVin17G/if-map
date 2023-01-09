@@ -61,6 +61,10 @@ ul li {
 .social_midia a {
     margin-right: 20px;
     color: #fff;
+    transition: 0.5s;
+}
+.social_midia a:hover {
+    color: #2878EB;
 }
 
 .creators {
