@@ -17,7 +17,6 @@ root.render(
         <Route element={<App />}>
           <Route path='/' element={<Home />} />
           <Route path='/ambientes' element={<Ambientes />} />
-          {/* Adicionar as outras rotas */}
         </Route>
       </Routes>
     </BrowserRouter>

@@ -1,20 +1,51 @@
-import AmbienteCard from "../../layouts/ambientes/AmbienteCard";
+import AmbienteCard from "../../layouts/ambienteCard/AmbienteCard";
+import Header from "../../layouts/header/Header";
+import Footer from "../../layouts/footer/Footer";
+
 import React, { useEffect, useState } from "react";
 import Api from '../../../sevices/Api'
 
-export default function Ambientes () {
-    const [ambientes, setAmbientes] = useState();
-    const test = [
-        {
-            "id": 1,
-            "name": "ambientq 01"
-        },
-        {
-            "id": 2,
-            "name": "ambiente 02"
-        },
-    ]
+import { useSearchParams } from "react-router-dom";
 
+export default function Ambientes () {
+    const [ambientes, setAmbientes] = useState([]);
+    
+    const [ searchParams ] = useSearchParams();
+    
+    const search = searchParams.get("search");
+    const id = searchParams.get("id");
+
+    var ambientesFiltrados
+    
+    if (search && id) {
+        if (search !== "undefined" && id !== "undefined") {
+            const lowerNome = search.toLowerCase()
+            
+            const ambientesFiltradosNome = ambientes.filter ((ambiente) =>  
+                ambiente.nome.toLowerCase().includes(lowerNome),        
+            )
+    
+            ambientesFiltrados = ambientesFiltradosNome.filter ((ambiente) =>
+                ambiente.diretoriaFk === id
+            )
+        } else if (id !== "undefined") {
+            const ambientesFiltrados = ambientes.filter ((ambiente) =>
+                ambiente.diretoriaFk === id
+            )
+        } else if (search !== "undefined") {
+            const lowerNome = search.toLowerCase()
+    
+            ambientesFiltrados = ambientes.filter ((ambiente) =>  
+                ambiente.nome.toLowerCase().includes(lowerNome),        
+            )
+        } else {
+            ambientesFiltrados = ambientes
+        }    
+    } else {
+        ambientesFiltrados = ambientes
+    }
+    
+    
     useEffect(() => {
         Api
             .get('/ambientes')
@@ -24,7 +55,11 @@ export default function Ambientes () {
             });
     }, []);
     
-    return (
-        <AmbienteCard items={test} />
+    return ( 
+        <>
+            <Header />
+            <AmbienteCard items={ambientesFiltrados} />
+            <Footer />
+        </>
     )
 }
