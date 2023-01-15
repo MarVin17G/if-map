@@ -17,8 +17,8 @@ export default function Ambientes () {
 
     var ambientesFiltrados
     
-    if (search && id) {
-        if (search !== "undefined" && id !== "undefined") {
+    if (search || id) {
+        if (search && id) {
             const lowerNome = search.toLowerCase()
             
             const ambientesFiltradosNome = ambientes.filter ((ambiente) =>  
@@ -26,13 +26,13 @@ export default function Ambientes () {
             )
     
             ambientesFiltrados = ambientesFiltradosNome.filter ((ambiente) =>
-                ambiente.diretoriaFk === id
+                ambiente.diretoriaFk.toString() === id
             )
-        } else if (id !== "undefined") {
-            const ambientesFiltrados = ambientes.filter ((ambiente) =>
-                ambiente.diretoriaFk === id
+        } else if (id) {
+            ambientesFiltrados = ambientes.filter ((ambiente) =>
+                ambiente.diretoriaFk.toString() === id
             )
-        } else if (search !== "undefined") {
+        } else if (search) {
             const lowerNome = search.toLowerCase()
     
             ambientesFiltrados = ambientes.filter ((ambiente) =>  
@@ -45,7 +45,6 @@ export default function Ambientes () {
         ambientesFiltrados = ambientes
     }
     
-    
     useEffect(() => {
         Api
             .get('/ambientes')
@@ -54,7 +53,7 @@ export default function Ambientes () {
                 console.error("Erro inesperado!" + err);
             });
     }, []);
-    
+
     return ( 
         <>
             <Header />

@@ -5,7 +5,7 @@ export default function AmbienteCard ({items}) {
     return (
         <div className="card_div_ambiente">
             <div className="card_ambiente">
-                {items.map((item) =>
+                {items?.map((item) =>
                     <Link to="" key={item.ambienteId} className="btn">
                         {item.nome}
                     </Link>

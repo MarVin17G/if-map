@@ -1,41 +1,19 @@
 import React, { useState } from "react"
-import { useNavigate  } from "react-router-dom";
 
 import Header from '../../layouts/header/Header';
 import Footer from '../../layouts/footer/Footer';
+import SearchBar from "../../layouts/searchBar/SearchBar";
 
-import { BsSearch } from 'react-icons/bs'
+import './Home.css'
 
 export default function Home () {
-    const [search, setSearch] = useState("")
-    const [id, setId] = useState()
-
-    const navigate = useNavigate()
-
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        
-        if(!search && !id) return
-
-        navigate(`/ambientes?search=${search}&id=${id}`)
-    }
-
     return (
         <>
             <Header />
-            <section>
-                <form onSubmit={handleSubmit}>
-                    <input 
-                        type="text" 
-                        placeholder="Buscar..." 
-                        onChange={((e) => setSearch(e.target.value))}
-                        value={search}    
-                    />
-                    <button type="submit">
-                        <BsSearch />
-                    </button>
-                </form>
-            </section>
+            <div className="SearchDiv">
+                <h1>Procure pelo seu ambiente</h1>
+                <SearchBar className="search" />
+            </div>
             <Footer />
         </>
     )

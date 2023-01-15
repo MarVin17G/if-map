@@ -1,0 +1,21 @@
+* {
+    margin: 0;
+}
+
+h1 {
+    position: relative;
+    top: 120px;
+    left: 15.5%;
+    text-align: center;
+    height: 140px;
+    font-size: 60px;
+    width: 70%;
+    font-family: "Jost", sans-serif;
+    font-size: calc(1.725rem + 5.7vw);
+    margin-bottom: 50px;
+}
+
+.SearchDiv {
+    position: relative;
+    background-color: rgb(228, 228, 240);
+}
