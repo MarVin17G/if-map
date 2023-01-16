@@ -1,3 +1,4 @@
 import ambienteRouters from './ambienteRoutes';
 import loginRouters from './loginRoutes'
-export { ambienteRouters, loginRouters };
+import diretoriaRouters from './diretoriasRouters';
+export { ambienteRouters, loginRouters, diretoriaRouters };

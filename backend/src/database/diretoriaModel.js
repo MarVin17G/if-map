@@ -1,13 +1,14 @@
 const db = require('./connection');
 
-const create = async (nome, gestorFk) => {
-  const query = 'insert into ifmapdb.Diretorias (nome, gestorFk) values (?,?)';
-  const [rows] = await db.execute(query, [nome, gestorFk]);
+// por enquanto, vou deixar sem gestorFk
+const create = async (nome) => {
+  const query = 'insert into ifmapdb.Diretorias (nome) values (?)';
+  const [rows] = await db.execute(query, [nome]);
 
   return {
     id: rows.insertId,
     nome,
-    gestorFk,
+    // gestorFk,
   };
 };
 
@@ -23,14 +24,13 @@ const getById = async (diretoriaId) => {
   return rows[0];
 };
 
-const update = async (nome, diretoriaId, gestorFk) => {
-  const query =
-    'update ifmapdb.Diretorias set nome = ?, set gestorFk = ? where diretoriaId = ?';
-  const [rows] = await db.execute(query, [nome, gestorFk, diretoriaId]);
+const update = async (nome, diretoriaId) => {
+  const query = 'update ifmapdb.Diretorias set nome = ? where diretoriaId = ?';
+  const [rows] = await db.execute(query, [nome, diretoriaId]);
 
   return {
     nome,
-    gestorFk,
+    // gestorFk,
   };
 };
 

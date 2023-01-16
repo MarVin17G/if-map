@@ -16,28 +16,36 @@ const getAll = async () => {
   return rows;
 };
 
-const getById = async (id) => {
+const getById = async (ambienteId) => {
   const [rows] = await db.execute(
-    'select * from ifmapdb.Ambientes where id = ?;',
-    [id]
+    'select * from ifmapdb.Ambientes where ambienteId = ?;',
+    [ambienteId]
   );
   return rows[0];
 };
 
-const update = async (ambienteId, nome, diretoriaFk) => {
+const update = async (
+  nome,
+  diretoriaFk,
+  mapaAmbiente,
+  videoRota,
+  ambienteId
+) => {
   await db.execute(
     `
-  update ifmapdb.ambientes
-  set nome = ?, diretoriaFk = ?
+  update ifmapdb.Ambientes
+  set nome = ?, diretoriaFk = ?, mapaAmbiente = ?, videoRota = ?
   where ambienteId = ?;
   `,
-    [nome, diretoriaFk, ambienteId]
+    [nome, diretoriaFk, mapaAmbiente, videoRota, ambienteId]
   );
   const idNumber = parseInt(ambienteId, 10);
   return {
     id: idNumber,
     nome,
     diretoriaFk,
+    mapaAmbiente,
+    videoRota,
   };
 };
 
@@ -49,8 +57,10 @@ const remove = async (ambienteId) => {
 
 const getByName = async (nome) => {
   const [rows] = await db.query(
-    'select * from ifmabdb.Ambientes WHERE nome = ?',
-    [nome]
+    // 'select * from ifmabdb.Ambientes WHERE nome LIKE = ?',
+    // select * from Ambientes where nome like '%diacon%';
+    'select * from ifmapdb.Ambientes where nome like ?',
+    ['%' + nome + '%']
   );
   return rows;
 };

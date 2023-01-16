@@ -1,5 +1,6 @@
 import * as express from 'express';
-import { loginRouters, ambienteRouters } from './routes';
+import { loginRouters, ambienteRouters, diretoriaRouters } from './routes';
+require('dotenv').config()
 
 class App {
   public app: express.Express;
@@ -25,6 +26,7 @@ class App {
   private routes(): void {
 
     this.app.use('/login', loginRouters);
+    this.app.use('/diretorias', diretoriaRouters);
     this.app.use('/ambientes', ambienteRouters);
   }
 
