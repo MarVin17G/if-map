@@ -4,7 +4,7 @@
     height: 170px;
 }
 
-.navbar {
+nav {
     display: flex;
     align-items: center;
     justify-content: space-between;

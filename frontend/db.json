@@ -1,0 +1,34 @@
+{
+    "ambientes": [
+        {
+            "nome": "lab 01",
+            "ambienteId": 1,
+            "diretoriaFk": 1
+        },
+        {
+            "nome": "sala 02",
+            "ambienteId": 2,
+            "diretoriaFk": 2
+        },
+        {
+            "nome": "sala 01",
+            "ambienteId": 3,
+            "diretoriaFk": 1
+        },
+        {
+            "nome": "audio 01",
+            "ambienteId": 4,
+            "diretoriaFk": 1
+        },
+        {
+            "nome": "lab 02",
+            "ambienteId": 5,
+            "diretoriaFk": 3
+        },
+        {
+            "nome": "sala 03",
+            "ambienteId": 6,
+            "diretoriaFk": 1
+        }
+    ]
+}
