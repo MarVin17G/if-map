@@ -30,7 +30,9 @@ form select {
     font-size: 20px;
     color: white;
 }
-
+form select option {
+    text-align: left;
+}
 
 form input {
     outline: none;
