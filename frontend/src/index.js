@@ -4,6 +4,7 @@ import App from './App';
 
 import Home from './components/pages/Home/Home.js';
 import Ambientes from './components/pages/Ambientes/Ambientes.js';
+import Diretorias  from './components/pages/Diretorias/Diretorias.js'
 
 import './index.css';
 
@@ -17,6 +18,7 @@ root.render(
         <Route element={<App />}>
           <Route path='/' element={<Home />} />
           <Route path='/ambientes' element={<Ambientes />} />
+          <Route path='/diretorias' element={<Diretorias />} />
         </Route>
       </Routes>
     </BrowserRouter>
