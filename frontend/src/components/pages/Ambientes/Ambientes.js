@@ -9,7 +9,6 @@ import { useSearchParams } from "react-router-dom";
 
 export default function Ambientes () {
     const [ambientes, setAmbientes] = useState([]);
-    
     const [ searchParams ] = useSearchParams();
     
     const search = searchParams.get("search");

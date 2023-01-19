@@ -30,5 +30,27 @@
             "ambienteId": 6,
             "diretoriaFk": 1
         }
+    ], 
+    "diretorias": [
+        {
+            "nome": "diretoria 01",
+            "id": 1
+        },
+        {
+            "nome": "diretoria 02",
+            "id": 2
+        },
+        {
+            "nome": "diretoria 03",
+            "id": 3
+        },
+        {
+            "nome": "diretoria 04",
+            "id": 4
+        },
+        {
+            "nome": "diretoria 05",
+            "id": 5
+        }
     ]
 }
