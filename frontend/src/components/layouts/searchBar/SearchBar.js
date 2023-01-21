@@ -1,8 +1,6 @@
 import React, { useState } from 'react'
 import './SearchBar.css'
-
 import { BsSearch } from 'react-icons/bs'
-
 import { useNavigate  } from "react-router-dom";
 
 export default function SearchBar () {
