@@ -20,10 +20,7 @@ export default function Header () {
                             <Link to='/'>Home</Link>
                         </li>
                         <li className={styles.item}>
-                            <Link to='/diretorias'>Diretoria</Link>
-                        </li>
-                        <li className={styles.item}>
-                            <Link to='/ajuda'>Ajuda</Link>
+                            <Link to='/diretorias'>Diretorias</Link>
                         </li>
                         <li className={styles.item}>
                             <Link to='/mapaGeral'>Mapa do IF</Link>
