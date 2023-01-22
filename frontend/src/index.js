@@ -7,6 +7,9 @@ import Ambientes from './pages/Ambientes';
 import Diretorias  from './pages/Diretorias'
 import MapaDoIF from './pages/MapaDoIF';
 import MenuAmbiente from './pages/MenuAmbiente';
+import GuiaFoto from './pages/guiaFoto/GuiaFoto';
+import GuiaMapa from './pages/guiaMapa/GuiaMapa';
+import GuiaVideo from './pages/guiaVideo/GuiaVideo'
 
 import './index.css';
 
@@ -23,6 +26,9 @@ root.render(
           <Route path='/diretorias' element={<Diretorias />} />
           <Route path='/mapaGeral' element={<MapaDoIF />} />
           <Route path='/menuAmbiente' element={<MenuAmbiente/>} />
+          <Route path='/guiaVideo' element={<GuiaVideo />} />
+          <Route path='/guiaFoto' element={<GuiaFoto />} />
+          <Route path='/guiaMapa' element={<GuiaMapa />} />
         </Route>
       </Routes>
     </BrowserRouter>

@@ -5,7 +5,7 @@ export default function DiretoriaCard ({ items }) {
     return (
         <section className="div_card_dir">
             {items?.map((diretoria) => 
-                <Link to="">
+                <Link to={`/ambientes?search=&id=${diretoria.diretoriaId}`}>
                     <div className='cartao_dir'>
                         <h3 className='title'>{diretoria.nome}</h3>
                         <div className="bar">

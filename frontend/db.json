@@ -34,23 +34,23 @@
     "diretorias": [
         {
             "nome": "diretoria 01",
-            "id": 1
+            "diretoriaId": 1
         },
         {
             "nome": "diretoria 02",
-            "id": 2
+            "diretoriaId": 2
         },
         {
             "nome": "diretoria 03",
-            "id": 3
+            "diretoriaId": 3
         },
         {
             "nome": "diretoria 04",
-            "id": 4
+            "diretoriaId": 4
         },
         {
             "nome": "diretoria 05",
-            "id": 5
+            "diretoriaId": 5
         }
     ]
 }

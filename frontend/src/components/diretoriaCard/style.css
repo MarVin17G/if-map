@@ -2,11 +2,9 @@
   .div_card_dir {
     position: relative;
     height: 400px;
-    width: 100%;
     padding-top: 70px;
     padding-left: calc(40% - 300px);
     display: flex;
-    margin-bottom: 50px;
     background-color: #100e17;
   }
   
@@ -95,3 +93,5 @@
     stroke-dashoffset: 100;
     transition: 0.6s ease-out;
   }
+
+  
