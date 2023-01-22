@@ -6,9 +6,9 @@
 | Data | Versão | Descrição | Autor |
 |------|--------|-----------|-------|
 | 21/01/2023 | 1.0 | versão inicial do documento. |  Manrick Lázaro |
-
+| 22/01/2023 | 2.0 | versão atualizada do documento. | Giovanna Melo |
 ### 1. Introdução
-A falta de um mapa ou de guias claros de referências afeta frequentadores do IFRN natal central, dificultando encontrar salas, diretorias, auditórios e muitas vezes atrasando o frequentador de chegar no seu lugar de interesse. O IFMap surge como uma proposta de solucionar esse problema, sendo um sistema de busca de ambientes que guia os usuários até seu local de destino.
+É importante salientar a nossa decisão de mudar a linguagem de programação de um projeto de Django para React e Backend em Node.js, o que representa uma mudança significativa na arquitetura do projeto. Django é um framework de desenvolvimento web baseado em Python que segue uma abordagem de "tudo incluído" e fornece uma estrutura de aplicativo pronta para uso. Isso é útil para projetos que precisam ser desenvolvidos rapidamente, mas pode ser limitante em termos de escalabilidade e flexibilidade. Em contraste, React é uma biblioteca JavaScript para construção de interfaces de usuário e Node.js é um ambiente de execução JavaScript do lado do servidor. Essas tecnologias seguem uma abordagem de "construir tudo você mesmo" e permitem aos desenvolvedores criar aplicativos altamente escaláveis e flexíveis. Ao mudar para React e Node.js, o projeto pode se beneficiar de uma arquitetura mais modular, o que facilita a manutenção e o desenvolvimento contínuo. Além disso, a separação clara entre a camada de front-end e back-end permite aos desenvolvedores trabalhar de forma mais eficiente em diferentes áreas do projeto. Em resumo, a mudança de linguagem de programação de um projeto de Django para React e Backend em Node.js representa uma mudança significativa na arquitetura do projeto e pode oferecer benefícios em termos de escalabilidade, flexibilidade e eficiência de desenvolvimento.
 
 ### 2. Termos e abreviações
 *IFRN* - Instituto Federal do Rio Grande do Norte.
@@ -28,6 +28,9 @@ A falta de um mapa ou de guias claros de referências afeta frequentadores do IF
 #### 3.2. Atributos de Qualidade
 | Id | Atributo De Qualidade | Motivação |
 | -- | --------------------- | --------- |
+| 1 | Funcionalidade | Desejamos um software que seja totalmente funcional, ou seja, que implemente todas as funcionalidades propostas. Além disso, é importante que o software seja fácil de entender em relação às suas capacidades, ou seja, que seja compreensível para os usuários. Isso geralmente inclui uma interface amigável e documentação clara. Isso é importante para garantir que os usuários possam utilizar o software de maneira eficiente e eficaz, sem se deparar com problemas ou dificuldades desnecessárias. |
+| 2 | Confiabilidade | É crucial que um software que envolve mapeação esteja sempre disponível e ofereça rotas confiáveis. Isso significa que o software deve estar sempre funcionando e disponível para uso, independentemente do momento ou da localização. É de extrema importância que o aplicativo esteja sempre disponível e forneça informações precisas e confiáveis para que os usuários possam se orientar e chegar ao seu destino de forma segura e eficiente. |
+| 3 | Eficiência | É essencial para os usuários que o software seja capaz de lidar com várias solicitações simultaneamente, sem comprometer o desempenho. Isso significa que o software deve ser escalável e ter uma boa capacidade de gerenciamento de recursos para poder lidar com uma grande quantidade de solicitações ao mesmo tempo. Isso é particularmente importante para aplicativos que são usados por muitas pessoas simultaneamente. |
 
 #### 3.3. Stakeholders
 | Papel | Interesse |
@@ -38,17 +41,12 @@ A falta de um mapa ou de guias claros de referências afeta frequentadores do IF
 #### 4.1. Restrição de software e programação
 |   | Restrição | Contexto e/ou motivação |
 | - | --------- | ----------------------- |
-| - | - | - |
+| RT1 | Dependências | A separação da aplicação por módulos nos trás uma dependência entre os modulos, seja ela tanto em ambiente de desenvolvimento quanto de produção. É necessário que todas as peças estejam devidamente funcionais para comunicação e funcionamento do conjunto. |
 
 #### 4.2. Restrição de sistema operacional 
 |   | Restrição | Contexto e/ou motivação |
 | - | --------- | ----------------------- |
-| - | - | - |
-
-#### 4.3. Restrição de hardware
-|   | Restrição | Contexto e/ou motivação |
-| - | --------- | ----------------------- |
-| - | - | - |
+| RT2 | Aplicativo Android/IOS | O sistema não possui versão nativa para android e ios, a proposta é desenvolver a versão web do sistema de forma responsiva e adaptável para utilização em qualquer tipo de dispositivo que possua navegadores. |
 
 ### 5. Escopo do sistema e contexto
 #### 5.1. Diagrama de caso de uso
@@ -64,10 +62,30 @@ A falta de um mapa ou de guias claros de referências afeta frequentadores do IF
 ### 6. Diagramas conceituais 
 #### 6.1. Visão lógica
 ##### modelo de domínio
+
+![image](https://github.com/tads-cnat/if-map/blob/main/docs/Imagens/Diagramas/Classes.jpg?raw=true)
 | Conceito | Descrição |
 | -------- | --------- |
+| Classe Rota | Responsável por armazenar informações sobre uma determinada rota, como vídeo e ponto de referência. |
+| Classe Ponto de Referência | Responsável por armazenar informações sobre um determinado ponto de referência, como imagem e descrição. |
+| Classe Ambiente | Responsável por armazenar informações sobre um determinado ambiente, como mapa, nome, diretoria e rota. |
+| Classe Mapa | Responsável por armazenar informações sobre um determinado mapa. |
+| Classe Diretoria | Responsável por armazenar informações sobre uma determinada diretoria, como nome. |
+| Classe Gestor | Responsável por armazenar informações sobre um determinado gestor, como user, matrícula e diretoria. |
 
 ##### modelo comportamental
+
+Diagrama de sequência do CDU Listar Ambientes:
+
+Tem como objetivo exibir para o usuário a lista de ambientes encontrados em cada diretoria.
+
+![image](https://github.com/tads-cnat/if-map/blob/main/docs/Imagens/Diagramas/Sequencia%20CDU%2005.jpg?raw=true)
+
+Diagrama de sequência do CDU Guiar por Vídeo:
+
+Tem como objetivo guiar o usuário até um local de interesse utilizando vídeos.
+
+![image](https://github.com/tads-cnat/if-map/blob/main/docs/Imagens/Diagramas/Sequencia%20CDU%2006.jpg?raw=true)
 
 ### 7. Detalhamento da Implementação e Ambiente Físico
 #### 7.1. Visão de implementação 
