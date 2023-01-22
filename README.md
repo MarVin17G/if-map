@@ -41,3 +41,6 @@ guiar usuarios para determinados locais.
 - Lucas Felipe Santos
 - Manrick Lázaro dos Santos Silva
 - Virginia Claudia de Lima Menezes 
+
+# Documentação da API
+[Documentação](https://app.swaggerhub.com/apis-docs/EUGIOVANNAMELO_1/IFMap/1.0.0)
