@@ -1,4 +1,3 @@
-import styles from './footer.module.css'
 import { Link } from 'react-router-dom'
 import React from 'react'
 
@@ -8,34 +7,34 @@ import { IoMdMail, IoIosArrowForward } from 'react-icons/io'
 import { BsFillTelephoneFill } from 'react-icons/bs'
 import { BiCopyright } from 'react-icons/bi'
 
-export default function Footer () {
+import './style.css'
+
+export default function Footer() {
     return (
         <footer>
-            <div className={styles.footerDiv}>
-                <div className={styles.linksProject}>
-                    <div className={styles.LogoProject}>
-                        <Link to='#' class={styles.ifmap}><FaMapMarkerAlt className={styles.map} />IFMAP</Link>
-                        <p class={styles.if_text}>Instituto Federal de Educação, Ciência e Tecnologia do Rio Grande do Norte</p>
+            <div className="footerDiv">
+                <div className="linksProject">
+                    <div className="LogoProject">
+                        <Link to='#' className="ifmap"><FaMapMarkerAlt className="map" />IFMAP</Link>
+                        <p className="if_text">Instituto Federal de Educação, Ciência e Tecnologia do Rio Grande do Norte</p>
                     </div>
-                    <div className={styles.contact}>
-                        <div className={styles.ende}>           
+                    <div className="contact">
+                        <div className="ende">           
                             <h3>Entre em contato</h3>
                             <address>
                                 <FaMapMarkerAlt /> Av. Senador Salgado Filho, 1559 - Tirol, Natal - RN CEP: 59015-000 <br /><br />
-
                                 <BsFillTelephoneFill/> - <br /><br />
-
                                 <IoMdMail /> projetoifmap@gmail.com
                             </address>
                        
-                            <div className={styles.social_midia}>
+                            <div className="social_midia">
                                 <Link to='#'><AiOutlineTwitter /></Link>
                                 <Link to='#'><FaFacebookF /></Link>
                                 <Link to='#'><FaLinkedinIn /></Link>
                                 <Link to='#'><AiFillInstagram /></Link>
                             </div>
                         </div>
-                        <div className={styles.creators}>
+                        <div className="creators">
                             <h3>Criadores</h3>
                             <div>
                                 <ul>
@@ -69,8 +68,8 @@ export default function Footer () {
                     </div>
                 </div>
             </div>
-            <div className={styles.cprt}>
-                    <p>Copyright <BiCopyright /> <Link to='#'>IFMap.</Link> All Rights Reserved.</p>
+            <div className="cprt">
+                <p>Copyright <BiCopyright /> <Link to='#'>IFMap.</Link> All Rights Reserved.</p>
             </div>
         </footer>
     )

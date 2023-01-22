@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import './DiretoriaCard.css';
+import './style.css'
 
 export default function DiretoriaCard ({ items }) {
     return (

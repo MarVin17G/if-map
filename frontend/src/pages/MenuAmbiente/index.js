@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import Api from '../../sevices/Api';
+import Api from '../../services/api';
 import { useSearchParams } from "react-router-dom";
 
 export default function MenuAmbiente () {
@@ -15,11 +15,11 @@ export default function MenuAmbiente () {
             .catch((err) => {
                 console.error("Erro inesperado!" + err);
             });
-    }, []);
+    }, [id]);
 
     return (
        <>
-            
+            {ambiente}
        </> 
     )
 }

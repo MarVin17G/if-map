@@ -1,9 +1,9 @@
-import './MapaDoIF.css'
+import './style.css'
 import React from 'react'
 import mapaIMG from '../../assets/imgs/Mapa-ifrn.jpg'
 
-import Header from '../../components/header/Header'
-import Footer from '../../components/footer/Footer'
+import Header from '../../components/header'
+import Footer from '../../components/footer'
 
 export default function MapaDoIF () {
     return (

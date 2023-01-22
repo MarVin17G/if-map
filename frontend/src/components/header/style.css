@@ -1,7 +1,11 @@
 .navbar_container {
+    width: 100%;
     padding: 25px;
     display: flex;
     justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 nav {
@@ -30,7 +34,8 @@ nav ul li a:hover {
 }
 
 .logo {
-    width: 75px;
+    width: 100px;
+    mix-blend-mode: multiply;
 }
 
 .menu_button {

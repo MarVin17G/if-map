@@ -1,9 +1,7 @@
-import './AmbienteCard.css'
+import './style.css'
 import { Link } from 'react-router-dom'
 
 export default function AmbienteCard ({items}) {
-    const url = "";
-
     return (
         <div className="card_div_ambiente">
             <div className="card_ambiente">
