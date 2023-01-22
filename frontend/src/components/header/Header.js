@@ -1,18 +1,17 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
-import Logo from '../../img/logo.jpg';
+import Logo from '../../assets/imgs/logo.jpg';
 import styles from './Header.module.css'
 
-import { FiMenu } from 'react-icons/fi'
 
 export default function Header () {
     return (
         <header>
-            <div className={styles.navbar_cont}>
+            <div className={styles.navbar_container}>
                 <nav className={styles.navbar}>
                     <div className={styles.logoDiv}>
-                        <Link to='/' className={styles.logo}>
-                            <img alt='Logo' src={Logo} />
+                        <Link to='/'>
+                            <img className={styles.logo} alt='Logo' src={Logo} />
                         </Link>
                     </div>  
                     <ul className={styles.list}>

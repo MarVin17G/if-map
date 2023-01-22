@@ -1,14 +1,14 @@
-.navbar_cont {
-    padding-left: 4%;
-    padding-right: 4%;
-    height: 170px;
+.navbar_container {
+    padding: 25px;
+    display: flex;
+    justify-content: center;
 }
 
 nav {
+    width: 75%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: auto;
 }
 nav ul {
     list-style: none;
@@ -21,7 +21,7 @@ nav ul li {
 }
 nav ul li a {
     text-decoration: none;
-    font-size: 19px;
+    font-size: 16px;
     color: #000;
     transition: 0.5s;
 }
@@ -29,6 +29,9 @@ nav ul li a:hover {
     color: #2878EB;
 }
 
+.logo {
+    width: 75px;
+}
 
 .menu_button {
     display: none;

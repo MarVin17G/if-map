@@ -1,9 +1,9 @@
-import react, { useEffect, useState } from 'react';
-import Api from '../../../sevices/Api'
+import { useEffect, useState } from 'react';
+import Api from '../../sevices/Api'
 
-import Header from '../../layouts/header/Header';
-import DiretoriaCard from '../../layouts/diretoriaCard/DiretoriaCard';
-import Footer from '../../layouts/footer/Footer';
+import Header from '../../components/header/Header';
+import DiretoriaCard from '../../components/diretoriaCard/DiretoriaCard';
+import Footer from '../../components/footer/Footer';
 
 export default function Diretorias () {
     const [diretorias, setDiretorias] = useState([]);

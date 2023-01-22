@@ -1,9 +1,9 @@
-import AmbienteCard from "../../layouts/ambienteCard/AmbienteCard";
-import Header from "../../layouts/header/Header";
-import Footer from "../../layouts/footer/Footer";
+import AmbienteCard from "../../components/ambienteCard/AmbienteCard";
+import Header from "../../components/header/Header";
+import Footer from "../../components/footer/Footer";
 
 import React, { useEffect, useState } from "react";
-import Api from '../../../sevices/Api'
+import Api from '../../sevices/Api'
 
 import { useSearchParams } from "react-router-dom";
 

@@ -2,11 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
 
-import Home from './components/pages/Home/Home.js';
-import Ambientes from './components/pages/Ambientes/Ambientes.js';
-import Diretorias  from './components/pages/Diretorias/Diretorias.js'
-import MapaDoIF from './components/pages/MapaDoIF/MapaDoIF';
-import MenuAmbiente from './components/pages/MenuAmbiente/MenuAmbiente';
+import Home from './pages/Home/Home.js';
+import Ambientes from './pages/Ambientes/Ambientes.js';
+import Diretorias  from './pages/Diretorias/Diretorias.js'
+import MapaDoIF from './pages/MapaDoIF/MapaDoIF';
+import MenuAmbiente from './pages/MenuAmbiente/MenuAmbiente';
 
 import './index.css';
 
