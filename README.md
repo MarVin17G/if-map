@@ -24,7 +24,7 @@ O projeto visa criar um sistema de navegação para o IFRN que permitirá aos us
 
 # Canais de Comunicação
 
-- Dicord
+- Discord
 - Whatsapp
 
 # Membros 
