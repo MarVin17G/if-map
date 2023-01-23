@@ -21,8 +21,8 @@ const upload = Multer({storage})
 const ambienteRouters = Router();
 
 ambienteRouters.get('/', ambienteControllers.getAll);
-ambienteRouters.get('/:nome', ambienteControllers.getByName);
 ambienteRouters.get('/:ambienteId', ambienteControllers.getById);
+//ambienteRouters.get('/:nome', ambienteControllers.getByName);
 ambienteRouters.post('/', upload.single('videoRota'), ambienteControllers.create);
 ambienteRouters.put('/:ambienteId', ambienteControllers.update);
 ambienteRouters.delete('/:ambienteId', ambienteControllers.remove);

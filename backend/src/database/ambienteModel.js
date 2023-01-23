@@ -17,10 +17,8 @@ const getAll = async () => {
 };
 
 const getById = async (ambienteId) => {
-  const [rows] = await db.execute(
-    'select * from ifmapdb.Ambientes where ambienteId = ?;',
-    [ambienteId]
-  );
+  const query = 'select * from ifmapdb.Ambientes where ambienteId = ?';
+  const [rows] = await db.execute(query, [ambienteId]);
   return rows[0];
 };
 
