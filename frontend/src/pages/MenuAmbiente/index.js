@@ -13,7 +13,7 @@ import { MdOutlineOndemandVideo } from 'react-icons/md';
 
 export default function MenuAmbiente () {
     const [ searchParams ] = useSearchParams();
-    const [ ambiente, setAmbiente ] = useState();
+    const [ ambiente, setAmbiente ] = useState([]);
     
     const id = searchParams.get('id')
 
@@ -24,13 +24,13 @@ export default function MenuAmbiente () {
             .catch((err) => {
                 console.error("Erro inesperado!" + err);
             });
-    }, [id]);
+    }, []);
 
     return (
        <>
             <Header />
             <div className="div_menu_ambiente">
-                <Link to={`/guiaFoto?id=${ambiente.ambienteId}`}>
+                <Link to={`/guiaFoto/${ambiente.ambienteId}`}>
                     <div className="cartao_dir cartao_dir_menu">
                         <h3 className="title title_menu">Guia com foto</h3>
                         <div class="bar bar_menu">
@@ -42,7 +42,7 @@ export default function MenuAmbiente () {
                         </div>
                     </div>
                 </Link>
-                <Link to={`/guiaVideo?id=${ambiente.ambienteId}`}>
+                <Link to={`/guiaVideo`}>
                     <div class="cartao_dir cartao_dir_menu">
                         <h3 className="title title_menu">Guia com Video</h3>
                         <div class="bar bar_menu">
@@ -54,7 +54,7 @@ export default function MenuAmbiente () {
                         </div>
                     </div>
                 </Link>
-                <Link to={`/guiaMapa?id=${ambiente.ambienteId}`}>
+                <Link to={`/guiaMapa/${ambiente.ambienteId}`}>
                     <div className="cartao_dir cartao_dir_menu">
                         <h3 class="title title_menu">Mapa</h3>
                         <div class="bar bar_menu">

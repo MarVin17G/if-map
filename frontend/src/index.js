@@ -9,7 +9,7 @@ import MapaDoIF from './pages/MapaDoIF';
 import MenuAmbiente from './pages/MenuAmbiente';
 import GuiaFoto from './pages/guiaFoto/GuiaFoto';
 import GuiaMapa from './pages/guiaMapa/GuiaMapa';
-import GuiaVideo from './pages/guiaVideo/GuiaVideo'
+import GuiaVideo from './pages/guiaVideo/GuiaVideo';
 
 import './index.css';
 
