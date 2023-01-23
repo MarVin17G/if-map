@@ -22,8 +22,8 @@ export default class LeaderBoardServices {
     await Diretoria.remove(diretoriaId);
     return 'Diretoria deletada!';
   }
-  static async getByName(nome: string){
-    const diretoriasPorNome = await Diretoria.getByName(nome);
-    return diretoriasPorNome;
-  }
+  // static async getByName(nome: string){
+  //   const diretoriasPorNome = await Diretoria.getByName(nome);
+  //   return diretoriasPorNome;
+  // }
 }

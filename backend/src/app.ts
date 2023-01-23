@@ -1,4 +1,4 @@
-import * as express from 'express';
+import express from 'express';
 import { loginRouters, ambienteRouters, diretoriaRouters } from './routes';
 require('dotenv').config()
 
