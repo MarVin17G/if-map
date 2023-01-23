@@ -110,11 +110,11 @@ Tem como objetivo guiar o usuário até um local de interesse utilizando vídeos
 
 #### 7.2. Visão de distribuição 
 
-Hardware do Cliente: O cliente se conectará ao site acessando-o em seu computador/notebook, utilizando um navegador web, através do protocolo TCP/IP, chamando o front-end da aplicação usando o protocolo HTTP.
+Hardware do usuário: O usuário se conectará ao site acessando-o em seu computador/notebook, utilizando um navegador web, através do protocolo TCP/IP, chamando o front-end da aplicação usando o protocolo HTTP.
 
-Servidor da Aplicação: Garante a comunicação de todos os componentes do back-end com o front-end e o hardware do cliente.
+Servidor da Aplicação: Garante a comunicação de todos os componentes do back-end com o front-end e o hardware do usuário.
 
-#### 7.3. persistencia 
+#### 7.3. Persistencia 
 
 A persistência dos dados foi feita pelo MySQL. Por ser um banco de dados relacional, proporciona mais facilidade de inserção e recuperação dos dados e é mais indicado para sistemas que necessitam de uma grande consistência de dados.
 
