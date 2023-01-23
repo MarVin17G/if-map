@@ -12,7 +12,7 @@ const create = async (nome, diretoriaFk, mapaAmbiente, videoRota) => {
 };
 
 const getAll = async () => {
-  const [rows] = await db.execute('select * from ifmapdb.Ambientes;');
+  const [rows] = await db.execute('call ifmapdb.GetAllAmbientes();');
   return rows;
 };
 
