@@ -17,6 +17,11 @@ O projeto visa criar um sistema de navegação para o IFRN que permitirá aos us
 - React
 - Express
 - Java Script
+- Type Script
+- MySQL
+- DotEnv
+- Multer
+- Vimeo
 
 # Guia do Desenvolvedor
 
