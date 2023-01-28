@@ -1,10 +1,10 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { BsSearch } from 'react-icons/bs'
 import { useNavigate  } from "react-router-dom";
 
 import './style.css'
 
-export default function SearchBar () {
+export default function SearchBar ({ diretorias }) {
     const [search, setSearch] = useState("")
     const [id, setId] = useState("")
 
@@ -23,11 +23,9 @@ export default function SearchBar () {
             <form onSubmit={handleSubmit} className="search_bar_form">
                 <select value={id} onChange={((e) => setId(e.target.value))} className="search_bar_select">
                     <option value="">Selecione...</option>
-                    <option value="1">Diatinf</option>
-                    <option value="2">Diaren</option>
-                    <option value="3">Diac</option>
-                    <option value="4">Diacin</option>
-                    <option value="5">Diacon</option>
+                    {diretorias?.map((diretoria) => 
+                        <option value={diretoria.diretoriaId}>{diretoria.nome}</option>
+                    )}
                 </select>
                 <input 
                     type="text" 
@@ -40,6 +38,8 @@ export default function SearchBar () {
                     <BsSearch />
                 </button>
             </form>
+        
+            
         </section>
     )
 }

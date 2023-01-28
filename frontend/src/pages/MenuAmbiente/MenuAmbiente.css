@@ -11,6 +11,9 @@
     position: relative;
     left: calc(40% - 370px);
 }
+.div_menu_ambiente a {
+  margin-right: 28%;
+}
   
 .cartao_dir_menu {
     display: flex;
