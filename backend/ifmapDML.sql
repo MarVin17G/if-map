@@ -13,11 +13,11 @@ VALUES ('Lab2', 1, null, null),
   ('Lab3', 1, null, null),
   ('ambiente diacon', 2, null, null),
   ('oto ambiente diacon', 2, null, null);
-INSERT INTO PontosReferencias (descricao)
-VALUES ('dept estágios'),
-  ('roscas'),
-  ('biblioteca');
-INSERT INTO AmbienteHasPontoRef(ambienteFk, pontoRefFk)
-VALUES (1, 1),
-  (2, 2),
-  (1, 3);
+-- INSERT INTO PontosReferencias (descricao)
+-- VALUES ('dept estágios'),
+--   ('roscas'),
+--   ('biblioteca');
+-- INSERT INTO AmbienteHasPontoRef(ambienteFk, pontoRefFk)
+-- VALUES (1, 1),
+--   (2, 2),
+--   (1, 3);
