@@ -10,8 +10,9 @@
 | 23/01/2023 | 3.0 | versão atualizada do documento. | Giovanna Melo |
 | 23/01/2023 | 4.0 | versão atualizada do documento. | Giovanna Melo |
 | 26/01/2023 | 5.0 | versão atualizada do documento. | Giovanna Melo |
+| 29/01/2023 | 6.0 | versão atualizada do documento. | Giovanna Melo |
 ### 1. Introdução
-O projeto visa criar um sistema de navegação para o IFRN que permitirá aos usuários encontrar facilmente os locais desejados dentro do instituto. Isso é feito através de uma mapeação detalhada do IFRN, onde os usuários podem navegar por diferentes áreas e encontrar informações sobre salas de aula, laboratórios, escritórios, entre outros locais. O sistema também pode incluir recursos interativos, como rotas de navegação passo a passo para chegar a um determinado local e informações adicionais sobre os locais, como horários de funcionamento e eventos programados. O objetivo final é tornar a navegação pelo IFRN mais fácil e conveniente para os usuários. É importante salientar a nossa decisão de mudar a linguagem de programação de um projeto de Django para React e Backend em Node.js, o que representa uma mudança significativa na arquitetura do projeto. Django é um framework de desenvolvimento web baseado em Python que segue uma abordagem de "tudo incluído" e fornece uma estrutura de aplicativo pronta para uso. Isso é útil para projetos que precisam ser desenvolvidos rapidamente, mas pode ser limitante em termos de escalabilidade e flexibilidade. Em contraste, React é uma biblioteca JavaScript para construção de interfaces de usuário e Node.js é um ambiente de execução JavaScript do lado do servidor. Essas tecnologias seguem uma abordagem de "construir tudo você mesmo" e permitem aos desenvolvedores criar aplicativos altamente escaláveis e flexíveis. Ao mudar para React e Node.js, o projeto pode se beneficiar de uma arquitetura mais modular, o que facilita a manutenção e o desenvolvimento contínuo. Além disso, a separação clara entre a camada de front-end e back-end permite aos desenvolvedores trabalhar de forma mais eficiente em diferentes áreas do projeto. Em resumo, a mudança de linguagem de programação de um projeto de Django para React e Backend em Node.js representa uma mudança significativa na arquitetura do projeto e pode oferecer benefícios em termos de escalabilidade, flexibilidade e eficiência de desenvolvimento.
+O projeto visa criar um sistema de navegação para o IFRN que permitirá aos usuários encontrar facilmente os locais desejados dentro do instituto. Isso é feito através de uma mapeação detalhada do IFRN, onde os usuários podem navegar por diferentes áreas e encontrar informações sobre salas de aula, laboratórios, escritórios, entre outros locais. O sistema também pode incluir recursos interativos, como rotas de navegação passo a passo para chegar a um determinado local e informações adicionais sobre os locais, como horários de funcionamento e eventos programados. O objetivo final é tornar a navegação pelo IFRN mais fácil e conveniente para os usuários. É importante salientar a nossa decisão de mudar a linguagem de programação de um projeto de Django para React e Backend em Node.js. Ao mudar para React e Node.js, o projeto pode se beneficiar de uma arquitetura mais modular, o que facilita a manutenção e o desenvolvimento contínuo. Além disso, a separação clara entre a camada de front-end e back-end permite aos desenvolvedores trabalhar de forma mais eficiente em diferentes áreas do projeto. Em resumo, a mudança de linguagem de programação representa uma mudança significativa na arquitetura do projeto e pode oferecer benefícios em termos de escalabilidade, flexibilidade e eficiência de desenvolvimento.
 
 ### 2. Termos e abreviações
 #### *IFRN* - Instituto Federal do Rio Grande do Norte.
@@ -62,12 +63,11 @@ O projeto visa criar um sistema de navegação para o IFRN que permitirá aos us
 #### 5.1. Diagrama de caso de uso
 | CDU | Objetivo | Ator primário | Implementado |
 | --- | -------- | ------------- | ------------ |
-| CDU 01 - Guia por foto | guiar o usuário até um local de interesse utilizando fotos e uma descrição textual. | usuário | SIM |
-| CDU 02 - Procurar por um Ambiente | campo de busca que retorna pro usuário uma lista de ambientes que possuam alguma semelhança com o que ele pesquisou | usuário | SIM |
-| CDU 03 - Listar diretorias | exibir para o usuário a lista de diretorias cadastradas | usuário | SIM |
-| CDU 04 - exibir mapa de um ambiente | exibir para o usuário o mapa de um ambiente escolhido | usuário | SIM |
-| CDU 05 - Lista ambientes | exibir para o usuário a lista de ambientes encontrados | usuário | SIM |
-| CDU 06 - Guia por video | guiar o usuário até um local de interesse utilizando um vídeo |  usuário | SIM |
+| CDU 01 - Procurar por um Ambiente | campo de busca que retorna pro usuário uma lista de ambientes que possuam alguma semelhança com o que ele pesquisou | usuário | SIM |
+| CDU 02 - Listar diretorias | exibir para o usuário a lista de diretorias cadastradas | usuário | SIM |
+| CDU 03 - Exibir mapa de um ambiente | exibir para o usuário o mapa de um ambiente escolhido | usuário | SIM |
+| CDU 04 - Listar ambientes | exibir para o usuário a lista de ambientes encontrados | usuário | SIM |
+| CDU 05 - Guiar por video | guiar o usuário até um local de interesse utilizando um vídeo |  usuário | SIM |
 
 ### 6. Diagramas conceituais 
 #### 6.1. Visão lógica
