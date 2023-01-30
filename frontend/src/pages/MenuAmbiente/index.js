@@ -11,7 +11,7 @@ import { FaMapMarkedAlt } from 'react-icons/fa';
 import { AiOutlinePicture } from 'react-icons/ai';
 import { MdOutlineOndemandVideo } from 'react-icons/md';
 
-export default function MenuAmbiente () {
+export default function MenuAmbiente() {
     const [ searchParams ] = useSearchParams();
     const [ ambiente, setAmbiente ] = useState([]);
     
@@ -42,7 +42,7 @@ export default function MenuAmbiente () {
                         </div>
                     </div>
                 </Link>
-                <Link to={`#`}>
+                <Link to={`/guiaMapa`}>
                     <div className="cartao_dir cartao_dir_menu">
                         <h3 class="title title_menu">Mapa</h3>
                         <div class="bar bar_menu">

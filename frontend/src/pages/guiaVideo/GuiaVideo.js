@@ -6,7 +6,7 @@ import './GuiaVideo.css';
 import Header from './../../components/header';
 import Footer from './../../components/footer';
 
-export default function MenuAmbiente () {
+export default function GuiaVideo () {
     const [ searchParams ] = useSearchParams();
     const [ ambiente, setAmbiente ] = useState();
     
@@ -22,10 +22,10 @@ export default function MenuAmbiente () {
     }, []); 
 
     return (
-        <>
+        <div className="guia-video__container">
             <Header />
             <iframe 
-                src="https://player.vimeo.com/video/791712669?h=3bab67beaf" 
+                src="https://player.vimeo.com/video/794020989?h=dd81025197&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture"
                 width="640" 
                 height="1170" 
                 frameborder="0" 
@@ -33,6 +33,6 @@ export default function MenuAmbiente () {
                 allowfullscreen>
             </iframe>
             <Footer />
-        </>
+        </div>
     )
 }

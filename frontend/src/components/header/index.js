@@ -8,11 +8,7 @@ export default function Header () {
         <header>
             <div className="navbar_container">
                 <nav className="navbar">
-                    <div className="logoDiv">
-                        <Link to='/'>
-                            <img className="logo" alt='Logo' src={Logo} />
-                        </Link>
-                    </div>  
+                    <img className="logo" alt='Logo' src={Logo} />
                     <ul className="list">
                         <li className="item">
                             <Link to='/'>Home</Link>

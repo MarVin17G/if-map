@@ -5,8 +5,8 @@ const mysql = require('mysql2/promise');
 console.log(process.env.HOST);
 const connection = mysql.createPool({
   host: process.env.HOST,
-  user: process.env.USERDB,
-  password: process.env.PASSWORD,
+  user: 'root',
+  password: '2020$erveR',
   database: process.env.DATABASE,
   port: process.env.DBPORT,
 });

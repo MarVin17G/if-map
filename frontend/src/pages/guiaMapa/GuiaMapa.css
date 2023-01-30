@@ -1,0 +1,12 @@
+.guia-mapa__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.guia-mapa__container > img {
+    position: relative;
+    margin-top: 100px;
+    margin-bottom: 20px;
+}

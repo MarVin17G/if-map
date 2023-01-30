@@ -1,6 +1,12 @@
 iframe {
     position: relative;
-    left: calc(36% - 120px);
-    margin-top: 40px;
+    margin-top: 100px;
     margin-bottom: 40px;
+}
+
+.guia-video__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }

@@ -1,18 +1,9 @@
 .div_menu_ambiente {
-    position: relative;
-    height: 500px;
+    height: 100vh;
     display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: #100e17;
-    padding-left: 4%;
-    padding-right: 4%;
-}
-.div_menu_ambiente a {
-    top: 100px;
-    position: relative;
-    left: calc(40% - 370px);
-}
-.div_menu_ambiente a {
-  margin-right: 28%;
 }
   
 .cartao_dir_menu {
