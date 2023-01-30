@@ -24,14 +24,14 @@ CREATE TABLE Ambientes (
 	PRIMARY KEY(ambienteId),
 	FOREIGN KEY(diretoriaFk) REFERENCES Diretorias(diretoriaId)
 );
-CREATE TABLE PontosReferencias (
-	pontoReferenciaId INT NOT NULL AUTO_INCREMENT,
-	descricao VARCHAR(100) NOT NULL,
-	PRIMARY KEY(pontoReferenciaId)
-);
-CREATE TABLE AmbienteHasPontoRef (
-	ambienteFk INT NOT NULL,
-	pontoRefFk INT NOT NULL,
-	FOREIGN kEY(ambienteFk) REFERENCES Ambientes(ambienteId),
-	FOREIGN KEY(pontoRefFk) REFERENCES PontosReferencias(pontoReferenciaId)
-);
+-- CREATE TABLE PontosReferencias (
+-- 	pontoReferenciaId INT NOT NULL AUTO_INCREMENT,
+-- 	descricao VARCHAR(100) NOT NULL,
+-- 	PRIMARY KEY(pontoReferenciaId)
+-- );
+-- CREATE TABLE AmbienteHasPontoRef (
+-- 	ambienteFk INT NOT NULL,
+-- 	pontoRefFk INT NOT NULL,
+-- 	FOREIGN kEY(ambienteFk) REFERENCES Ambientes(ambienteId),
+-- 	FOREIGN KEY(pontoRefFk) REFERENCES PontosReferencias(pontoReferenciaId)
+-- );
