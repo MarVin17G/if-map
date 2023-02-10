@@ -1,0 +1,43 @@
+.gestor-card-container {
+    padding: 20px;
+    background-color: #FFF;
+    border-radius: 5px;
+    color: #262626;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.gestor-card-info {
+    width: 20%;
+}
+
+.gestor-card-matricula {
+    width: 30%;
+}
+
+.gestor-card-actions {
+    display: flex;
+    gap: 5px;
+}
+
+.gestor-card-actions button {
+    border: none;
+    background-color: #F9F9F9;
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.gestor-card-actions__edit-button {
+    color: #0000a0;
+}
+
+.gestor-card-actions__remove-button {
+    color: #9c1212;
+}

@@ -14,6 +14,8 @@ import GuiaVideo from './pages/guiaVideo/GuiaVideo';
 import './index.css';
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Gestores from './pages/Gestores';
+import NovoGestor from './pages/NovoGestor';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -24,6 +26,9 @@ root.render(
           <Route path='/' element={<Home />} />
           <Route path='/ambientes' element={<Ambientes />} />
           <Route path='/diretorias' element={<Diretorias />} />
+          <Route path='/gestores' element={<Gestores />} />
+          <Route path='/gestor/novo' element={<NovoGestor />} />
+          <Route path='/gestor/:id' element={<NovoGestor />} />
           <Route path='/mapaGeral' element={<MapaDoIF />} />
           <Route path='/menuAmbiente' element={<MenuAmbiente/>} />
           <Route path='/guiaVideo' element={<GuiaVideo />} />

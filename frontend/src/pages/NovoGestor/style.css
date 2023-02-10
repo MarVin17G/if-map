@@ -1,0 +1,37 @@
+.novo-gestor-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 150px 0;
+}
+
+.novo-gestor-button {
+    width: 100%;
+    background-color: #52a819;
+    color: white;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.novo-gestor-container form {
+    width: 50%;
+}
+
+.novo-gestor-container input {
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    margin-bottom: 5px;
+    font-size: 16px;
+}
+
+.novo-gestor-button:hover {
+    background-color: #69bd32;
+}
