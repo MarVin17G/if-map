@@ -1,12 +1,12 @@
 import { Router } from "express";
-import { ambienteControllers } from "../controllers";
+import { gestorControllers } from "../controllers";
 
 const gestorRouters = Router();
 
-gestorRouters.get("/", ambienteControllers.getAll);
-gestorRouters.get("/:gestorId", ambienteControllers.getById);
-gestorRouters.post("/", ambienteControllers.create);
-gestorRouters.put("/:gestorId", ambienteControllers.update);
-gestorRouters.delete("/:gestorId", ambienteControllers.remove);
+gestorRouters.get("/", gestorControllers.getAll);
+gestorRouters.get("/:gestorId", gestorControllers.getById);
+gestorRouters.post("/", gestorControllers.create);
+gestorRouters.put("/:gestorId", gestorControllers.update);
+gestorRouters.delete("/:gestorId", gestorControllers.remove);
 
 export default gestorRouters;
