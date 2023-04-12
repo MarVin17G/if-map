@@ -3,8 +3,8 @@ import { useSearchParams } from "react-router-dom";
 import Api from '../../services/api';
 import './GuiaVideo.css';
 
-import Header from './../../components/header';
-import Footer from './../../components/footer';
+import Header from '../../components/header';
+import Footer from '../../components/footer';
 
 export default function GuiaVideo () {
     const [ searchParams ] = useSearchParams();
