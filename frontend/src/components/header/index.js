@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Logo from '../../assets/imgs/logo.jpg';
-import './style.css'
+import './style.css';
 
 export default function Header () {
     return (
@@ -23,5 +23,5 @@ export default function Header () {
                 </nav>
             </div>
         </header>
-    )
+    );
 }

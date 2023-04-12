@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import Api from '../../services/api'
+import Api from '../../services/api';
 
 import Header from '../../components/header';
 import DiretoriaCard from '../../components/diretoriaCard';
@@ -13,8 +13,8 @@ export default function Diretorias () {
             .get('/diretorias')
             .then((res) => setDiretorias(res.data))
             .catch((error) => {
-                console.log("erro" + error)
-            })
+                console.log("erro" + error);
+            });
     },  []);
     
     return (
@@ -23,5 +23,5 @@ export default function Diretorias () {
             <DiretoriaCard items={diretorias} />
             <Footer />
         </>
-    )
+    );
 }

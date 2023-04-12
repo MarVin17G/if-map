@@ -18,6 +18,6 @@ const GestorCard = (props) => {
             </div>
         </div>
     );
-}
+};
 
 export default GestorCard;

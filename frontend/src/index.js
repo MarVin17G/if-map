@@ -4,18 +4,18 @@ import App from './App';
 
 import Home from './pages/Home';
 import Ambientes from './pages/Ambientes';
-import Diretorias  from './pages/Diretorias'
+import Diretorias  from './pages/Diretorias';
 import MapaDoIF from './pages/MapaDoIF';
 import MenuAmbiente from './pages/MenuAmbiente';
 import GuiaFoto from './pages/guiaFoto/GuiaFoto';
 import GuiaMapa from './pages/guiaMapa/GuiaMapa';
 import GuiaVideo from './pages/guiaVideo/GuiaVideo';
+import NovoGestor from './pages/NovoGestor';
 
 import './index.css';
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Gestores from './pages/Gestores';
-import NovoGestor from './pages/NovoGestor';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

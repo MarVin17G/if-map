@@ -1,14 +1,14 @@
-import React, { useEffect, useState } from "react"
-import Api from "./../../services/api"
+import React, { useEffect, useState } from "react";
+import Api from "./../../services/api";
 
 import Header from '../../components/header';
 import Footer from '../../components/footer';
 import SearchBar from "../../components/searchBar";
 
-import './style.css'
+import './style.css';
 
 export default function Home () {
-    const [diretorias, setDiretorias] = useState([])
+    const [diretorias, setDiretorias] = useState([]);
 
     useEffect(() => {
         Api
@@ -16,8 +16,8 @@ export default function Home () {
             .then((res) => setDiretorias(res.data))
             .catch((err) => {
                 console.error("Error " + err);
-            })
-    }, [])
+            });
+    }, []);
     
     return (
         <>
@@ -28,5 +28,5 @@ export default function Home () {
             </div>
             <Footer />
         </>
-    )
+    );
 }

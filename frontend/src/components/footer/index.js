@@ -1,13 +1,13 @@
-import { Link } from 'react-router-dom'
-import React from 'react'
+import { Link } from 'react-router-dom';
+import React from 'react';
 
-import { FaMapMarkerAlt, FaFacebookF, FaLinkedinIn } from 'react-icons/fa'
-import { AiOutlineTwitter, AiFillInstagram } from 'react-icons/ai'
-import { IoMdMail, IoIosArrowForward } from 'react-icons/io'
-import { BsFillTelephoneFill } from 'react-icons/bs'
-import { BiCopyright } from 'react-icons/bi'
+import { FaMapMarkerAlt, FaFacebookF, FaLinkedinIn } from 'react-icons/fa';
+import { AiOutlineTwitter, AiFillInstagram } from 'react-icons/ai';
+import { IoMdMail, IoIosArrowForward } from 'react-icons/io';
+import { BsFillTelephoneFill } from 'react-icons/bs';
+import { BiCopyright } from 'react-icons/bi';
 
-import './style.css'
+import './style.css';
 
 export default function Footer() {
     return (
@@ -72,5 +72,5 @@ export default function Footer() {
                 <p>Copyright <BiCopyright /> <Link to='#'>IFMap.</Link> All Rights Reserved.</p>
             </div>
         </footer>
-    )
+    );
 }
