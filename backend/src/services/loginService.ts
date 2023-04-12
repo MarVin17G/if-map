@@ -2,7 +2,7 @@ import { readFile } from 'fs/promises';
 import { sign } from 'jsonwebtoken';
 
 // import Gestor from '../database/gestorModel'
-const Gestor = require('../database/gestorModel')
+const Gestor = require('../database/gestorModel');
 
 export default class LoginServices {
   static async create(email:string, _password:string) {
