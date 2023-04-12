@@ -12,7 +12,7 @@ export default function GuiaMapa() {
     const [ searchParams ] = useSearchParams();
     const [ ambiente, setAmbiente ] = useState();
     
-    const id = searchParams.get('id')
+    const id = searchParams.get('id');
 
     useEffect(() => {
         Api
@@ -29,5 +29,5 @@ export default function GuiaMapa() {
                 <img src={mapaDIATINF} />
             <Footer />
         </div>
-    )
+    );
 }

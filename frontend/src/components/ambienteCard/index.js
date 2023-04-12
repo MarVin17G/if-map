@@ -1,5 +1,5 @@
-import './style.css'
-import { Link } from 'react-router-dom'
+import './style.css';
+import { Link } from 'react-router-dom';
 
 export default function AmbienteCard ({items}) {
     return (
@@ -17,5 +17,5 @@ export default function AmbienteCard ({items}) {
                 )}
             </div>
         </div>
-    ) 
+    );
 }

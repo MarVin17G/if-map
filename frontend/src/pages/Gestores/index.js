@@ -17,11 +17,11 @@ const Gestores = () => {
         } catch(err) {
             //
         }
-    }
+    };
 
     const handleEdit = (id) => {
         navigate(`/gestor/${id}`);
-    }
+    };
 
     const handleDelete = async (id) => {
         try {
@@ -30,7 +30,7 @@ const Gestores = () => {
         } catch(err) {
             //
         }
-    }
+    };
 
     useEffect(() => {
         getGestores();
@@ -49,6 +49,6 @@ const Gestores = () => {
             <Footer />
         </>
     );
-}
+};
 
 export default Gestores;

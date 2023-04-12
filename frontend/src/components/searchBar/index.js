@@ -1,29 +1,29 @@
-import React, { useEffect, useState } from 'react'
-import { BsSearch } from 'react-icons/bs'
+import React, { useEffect, useState } from 'react';
+import { BsSearch } from 'react-icons/bs';
 import { useNavigate  } from "react-router-dom";
-import Api from '../../services/api'
+import Api from '../../services/api';
 
-import './style.css'
+import './style.css';
 
 export default function SearchBar ({ diretorias }) {
-    const [search, setSearch] = useState("")
-    const [id, setId] = useState("")
+    const [search, setSearch] = useState("");
+    const [id, setId] = useState("");
 
-    const navigate = useNavigate()
+    const navigate = useNavigate();
 
     const handleSubmit = async(e) => {
         e.preventDefault();
-        if(!search && !id) return
+        if(!search && !id) return;
 
         let { data } = await Api.get('/ambientes');
-        let ambientes = data.filter((ambiente) => ambiente.nome.includes(search))
+        let ambientes = data.filter((ambiente) => ambiente.nome.includes(search));
         if (ambientes.length === 1) {
-            navigate(`/menuAmbiente?id=${ambientes[0].ambienteId}`)
+            navigate(`/menuAmbiente?id=${ambientes[0].ambienteId}`);
             return;
         }
 
-        navigate(`/ambientes?search=${search}&id=${id}`)
-    }
+        navigate(`/ambientes?search=${search}&id=${id}`);
+    };
     
     return (
         <section className="search_bar_container">
@@ -48,5 +48,5 @@ export default function SearchBar ({ diretorias }) {
         
             
         </section>
-    )
+    );
 }

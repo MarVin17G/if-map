@@ -1,9 +1,9 @@
-import './style.css'
-import React from 'react'
-import mapaIMG from '../../assets/imgs/Mapa-ifrn.jpg'
+import './style.css';
+import React from 'react';
+import mapaIMG from '../../assets/imgs/Mapa-ifrn.jpg';
 
-import Header from '../../components/header'
-import Footer from '../../components/footer'
+import Header from '../../components/header';
+import Footer from '../../components/footer';
 
 export default function MapaDoIF () {
     return (
@@ -14,5 +14,5 @@ export default function MapaDoIF () {
             </section>
             <Footer />
         </>
-    )
+    );
 }
