@@ -4,8 +4,8 @@ import { useSearchParams } from "react-router-dom";
 import { Link } from 'react-router-dom';
 import './MenuAmbiente.css';
 
-import Header from './../../components/header';
-import Footer from './../../components/footer';
+import Header from '../../components/header';
+import Footer from '../../components/footer';
 
 import { FaMapMarkedAlt } from 'react-icons/fa';
 import { AiOutlinePicture } from 'react-icons/ai';
