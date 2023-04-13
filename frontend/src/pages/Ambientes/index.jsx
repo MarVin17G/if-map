@@ -1,4 +1,4 @@
-import AmbienteCard from "../../components/ambienteCard";
+import AmbienteCard from '../../components/ambienteCard';
 import Header from "../../components/header";
 import Footer from "../../components/footer";
 
