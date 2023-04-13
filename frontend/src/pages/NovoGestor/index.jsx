@@ -18,19 +18,19 @@ const NovoGestor = () => {
         e.preventDefault();
 
         try {
-            if (id) await api.put(`/gestores/${id}`, { nome, email, matricula, senha })
-            else await api.post('/gestores', { nome, email, matricula, senha })
+            if (id) await api.put(`/gestores/${id}`, { nome, email, matricula, senha });
+            else await api.post('/gestores', { nome, email, matricula, senha });
 
             navigate('/gestores');
         } catch (err) {
             alert('Error ao cadastrar gestor.');
         }
-    }
+    };
 
     useEffect(() => {
         const getGestor = async () => {
             try {
-                let response = await api.get(`/gestores/${id}`)
+                let response = await api.get(`/gestores/${id}`);
 
                 setNome(response.data.nome);
                 setEmail(response.data.email);
@@ -39,7 +39,7 @@ const NovoGestor = () => {
             } catch(err) {
                 //
             }
-        }
+        };
 
         if (id) getGestor();
     }, [id]);
@@ -60,6 +60,6 @@ const NovoGestor = () => {
             <Footer />
         </>
     );
-}
+};
 
 export default NovoGestor;

@@ -3,14 +3,14 @@ import { useSearchParams } from "react-router-dom";
 import Api from '../../services/api';
 import './GuiaVideo.css';
 
-import Header from './../../components/header';
-import Footer from './../../components/footer';
+import Header from '../../components/header';
+import Footer from '../../components/footer';
 
 export default function GuiaVideo () {
     const [ searchParams ] = useSearchParams();
     const [ ambiente, setAmbiente ] = useState();
     
-    const id = searchParams.get('id')
+    const id = searchParams.get('id');
 
     useEffect(() => {
         Api
@@ -34,5 +34,5 @@ export default function GuiaVideo () {
             </iframe>
             <Footer />
         </div>
-    )
+    );
 }

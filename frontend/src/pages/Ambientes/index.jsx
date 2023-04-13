@@ -3,7 +3,7 @@ import Header from "../../components/header";
 import Footer from "../../components/footer";
 
 import React, { useEffect, useState } from "react";
-import Api from '../../services/api'
+import Api from '../../services/api';
 
 import { useSearchParams } from "react-router-dom";
 
@@ -14,34 +14,34 @@ export default function Ambientes () {
     const search = searchParams.get("search");
     const id = searchParams.get("id");
 
-    var ambientesFiltrados
+    var ambientesFiltrados;
     
     if (search || id) {
         if (search && id) {
-            const lowerNome = search.toLowerCase()
+            const lowerNome = search.toLowerCase();
             
             const ambientesFiltradosNome = ambientes.filter ((ambiente) =>  
                 ambiente.nome.toLowerCase().includes(lowerNome),        
-            )
+            );
     
             ambientesFiltrados = ambientesFiltradosNome.filter ((ambiente) =>
                 ambiente.diretoriaFk.toString() === id
-            )
+            );
         } else if (id) {
             ambientesFiltrados = ambientes.filter ((ambiente) =>
                 ambiente.diretoriaFk.toString() === id
-            )
+            );
         } else if (search) {
-            const lowerNome = search.toLowerCase()
+            const lowerNome = search.toLowerCase();
     
             ambientesFiltrados = ambientes.filter ((ambiente) =>  
                 ambiente.nome.toLowerCase().includes(lowerNome),        
-            )
+            );
         } else {
-            ambientesFiltrados = ambientes
+            ambientesFiltrados = ambientes;
         }    
     } else {
-        ambientesFiltrados = ambientes
+        ambientesFiltrados = ambientes;
     }
     
     useEffect(() => {
@@ -59,5 +59,5 @@ export default function Ambientes () {
             <AmbienteCard items={ambientesFiltrados} />
             <Footer />
         </>
-    )
+    );
 }

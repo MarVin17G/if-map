@@ -4,8 +4,8 @@ import { useSearchParams } from "react-router-dom";
 import { Link } from 'react-router-dom';
 import './MenuAmbiente.css';
 
-import Header from './../../components/header';
-import Footer from './../../components/footer';
+import Header from '../../components/header';
+import Footer from '../../components/footer';
 
 import { FaMapMarkedAlt } from 'react-icons/fa';
 import { AiOutlinePicture } from 'react-icons/ai';
@@ -15,7 +15,7 @@ export default function MenuAmbiente() {
     const [ searchParams ] = useSearchParams();
     const [ ambiente, setAmbiente ] = useState([]);
     
-    const id = searchParams.get('id')
+    const id = searchParams.get('id');
 
     useEffect(() => {
         Api
@@ -57,5 +57,5 @@ export default function MenuAmbiente() {
             </div>  
             <Footer />
        </> 
-    )
+    );
 }
