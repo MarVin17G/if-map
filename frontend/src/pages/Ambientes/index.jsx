@@ -1,18 +1,18 @@
 import AmbienteCard from '../../components/ambienteCard';
-import Header from "../../components/header";
-import Footer from "../../components/footer";
+import Header from '../../components/header';
+import Footer from '../../components/footer';
 
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState } from 'react';
 import Api from '../../services/api';
 
-import { useSearchParams } from "react-router-dom";
+import { useSearchParams } from 'react-router-dom';
 
 export default function Ambientes () {
     const [ambientes, setAmbientes] = useState([]);
     const [ searchParams ] = useSearchParams();
     
-    const search = searchParams.get("search");
-    const id = searchParams.get("id");
+    const search = searchParams.get('search');
+    const id = searchParams.get('id');
 
     var ambientesFiltrados;
     
@@ -49,7 +49,7 @@ export default function Ambientes () {
             .get('/ambientes')
             .then((res) => setAmbientes(res.data))
             .catch((err) => {
-                console.error("Erro inesperado!" + err);
+                console.error('Erro inesperado!' + err);
             });
     }, []);
 
