@@ -13,7 +13,7 @@ export default function Diretorias () {
             .get('/diretorias')
             .then((res) => setDiretorias(res.data))
             .catch((error) => {
-                console.log("erro" + error);
+                console.log(`erro ${error}`);
             });
     },  []);
     
