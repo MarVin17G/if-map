@@ -5,23 +5,20 @@ import Header from '../../components/header';
 import DiretoriaCard from '../../components/diretoriaCard';
 import Footer from '../../components/footer';
 
-export default function Diretorias () {
-    const [diretorias, setDiretorias] = useState([]);
+export default function Diretorias() {
+  const [diretorias, setDiretorias] = useState([]);
 
-    useEffect(() => {
-        Api 
-            .get('/diretorias')
-            .then((res) => setDiretorias(res.data))
-            .catch((error) => {
-                console.log(`erro ${error}`);
-            });
-    },  []);
-    
-    return (
-        <>
-            <Header />
-            <DiretoriaCard items={diretorias} />
-            <Footer />
-        </>
-    );
+  useEffect(() => {
+    Api
+      .get('/diretorias')
+      .then((res) => setDiretorias(res.data));
+  }, []);
+
+  return (
+    <>
+      <Header />
+      <DiretoriaCard items={diretorias} />
+      <Footer />
+    </>
+  );
 }
