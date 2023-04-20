@@ -1,61 +1,56 @@
-import React, { useState, useEffect } from "react";
-import Api from '../../services/api';
-import { useSearchParams } from "react-router-dom";
-import { Link } from 'react-router-dom';
-import './MenuAmbiente.css';
-
-import Header from '../../components/header';
-import Footer from '../../components/footer';
+import { useState, useEffect, React } from 'react';
+import { useSearchParams, Link } from 'react-router-dom';
 
 import { FaMapMarkedAlt } from 'react-icons/fa';
-import { AiOutlinePicture } from 'react-icons/ai';
 import { MdOutlineOndemandVideo } from 'react-icons/md';
+import Footer from '../../components/footer';
+import Header from '../../components/header';
+import Api from '../../services/api';
+import './MenuAmbiente.css';
 
 export default function MenuAmbiente() {
-    const [ searchParams ] = useSearchParams();
-    const [ ambiente, setAmbiente ] = useState([]);
-    
-    const id = searchParams.get('id');
+  const [searchParams] = useSearchParams();
+  // eslint-disable-next-line no-unused-vars
+  const [ambiente, setAmbiente] = useState([]);
 
-    useEffect(() => {
-        Api
-            .get(`/ambientes/${id}`)
-            .then((res) => setAmbiente(res.data))
-            .catch((err) => {
-                console.error("Erro inesperado!" + err);
-            });
-    }, []);
+  const id = searchParams.get('id');
 
-    return (
-       <>
-            <Header />
-            <div className="div_menu_ambiente">
-                <Link to={`/guiaVideo`}>
-                    <div class="cartao_dir cartao_dir_menu">
-                        <h3 className="title title_menu">Guia com Video</h3>
-                        <div class="bar bar_menu">
-                            <div class="emptybar emptybar_menu"></div>
-                            <div class="filledbar filledbar_menu"></div>
-                        </div>
-                        <div className="icon_menu">
-                            <MdOutlineOndemandVideo />
-                        </div>
-                    </div>
-                </Link>
-                <Link to={`/guiaMapa`}>
-                    <div className="cartao_dir cartao_dir_menu">
-                        <h3 class="title title_menu">Mapa</h3>
-                        <div class="bar bar_menu">
-                            <div class="emptybar emptybar_menu"></div>
-                            <div class="filledbar filledbar_menu"></div>
-                        </div>
-                        <div className="icon_menu">
-                            <FaMapMarkedAlt />
-                        </div>
-                    </div>
-                </Link>
-            </div>  
-            <Footer />
-       </> 
-    );
+  useEffect(() => {
+    Api
+      .get(`/ambientes/${id}`)
+      .then((res) => setAmbiente(res.data));
+  }, []);
+
+  return (
+    <>
+      <Header />
+      <div className="div_menu_ambiente">
+        <Link to="/guiaVideo">
+          <div className="cartao_dir cartao_dir_menu">
+            <h3 className="title title_menu">Guia com Video</h3>
+            <div className="bar bar_menu">
+              <div className="emptybar emptybar_menu" />
+              <div className="filledbar filledbar_menu" />
+            </div>
+            <div className="icon_menu">
+              <MdOutlineOndemandVideo />
+            </div>
+          </div>
+        </Link>
+        <Link to="/guiaMapa">
+          <div className="cartao_dir cartao_dir_menu">
+            <h3 className="title title_menu">Mapa</h3>
+            <div className="bar bar_menu">
+              <div className="emptybar emptybar_menu" />
+              <div className="filledbar filledbar_menu" />
+            </div>
+            <div className="icon_menu">
+              <FaMapMarkedAlt />
+            </div>
+          </div>
+        </Link>
+      </div>
+      <Footer />
+    </>
+  );
 }

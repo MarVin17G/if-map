@@ -1,11 +1,10 @@
+import React, { useEffect, useState } from 'react';
+import { useSearchParams } from 'react-router-dom';
+
 import AmbienteCard from '../../components/ambienteCard';
 import Header from '../../components/header';
 import Footer from '../../components/footer';
-
-import React, { useEffect, useState } from 'react';
 import Api from '../../services/api';
-
-import { useSearchParams } from 'react-router-dom';
 
 export default function Ambientes() {
   const [ambientes, setAmbientes] = useState([]);
@@ -14,7 +13,7 @@ export default function Ambientes() {
   const search = searchParams.get('search');
   const id = searchParams.get('id');
 
-  var ambientesFiltrados;
+  let ambientesFiltrados;
 
   if (search || id) {
     if (search && id) {
@@ -45,10 +44,7 @@ export default function Ambientes() {
   useEffect(() => {
     Api
       .get('/ambientes')
-      .then((res) => setAmbientes(res.data))
-      .catch((err) => {
-        console.error('Erro inesperado!' + err);
-      });
+      .then((res) => setAmbientes(res.data));
   }, []);
 
   return (
