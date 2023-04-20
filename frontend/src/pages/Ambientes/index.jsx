@@ -7,57 +7,55 @@ import Api from '../../services/api';
 
 import { useSearchParams } from 'react-router-dom';
 
-export default function Ambientes () {
-    const [ambientes, setAmbientes] = useState([]);
-    const [ searchParams ] = useSearchParams();
-    
-    const search = searchParams.get('search');
-    const id = searchParams.get('id');
+export default function Ambientes() {
+  const [ambientes, setAmbientes] = useState([]);
+  const [searchParams] = useSearchParams();
 
-    var ambientesFiltrados;
-    
-    if (search || id) {
-        if (search && id) {
-            const lowerNome = search.toLowerCase();
-            
-            const ambientesFiltradosNome = ambientes.filter ((ambiente) =>  
-                ambiente.nome.toLowerCase().includes(lowerNome),        
-            );
-    
-            ambientesFiltrados = ambientesFiltradosNome.filter ((ambiente) =>
-                ambiente.diretoriaFk.toString() === id
-            );
-        } else if (id) {
-            ambientesFiltrados = ambientes.filter ((ambiente) =>
-                ambiente.diretoriaFk.toString() === id
-            );
-        } else if (search) {
-            const lowerNome = search.toLowerCase();
-    
-            ambientesFiltrados = ambientes.filter ((ambiente) =>  
-                ambiente.nome.toLowerCase().includes(lowerNome),        
-            );
-        } else {
-            ambientesFiltrados = ambientes;
-        }    
+  const search = searchParams.get('search');
+  const id = searchParams.get('id');
+
+  var ambientesFiltrados;
+
+  if (search || id) {
+    if (search && id) {
+      const lowerNome = search.toLowerCase();
+
+      const ambientesFiltradosNome = ambientes.filter((ambiente) => ambiente.nome
+        .toLowerCase()
+        .includes(lowerNome));
+
+      ambientesFiltrados = ambientesFiltradosNome.filter((ambiente) => ambiente.diretoriaFk
+        .toString() === id);
+    } else if (id) {
+      ambientesFiltrados = ambientes.filter((ambiente) => ambiente.diretoriaFk
+        .toString() === id);
+    } else if (search) {
+      const lowerNome = search.toLowerCase();
+
+      ambientesFiltrados = ambientes.filter((ambiente) => ambiente.nome
+        .toLowerCase()
+        .includes(lowerNome));
     } else {
-        ambientesFiltrados = ambientes;
+      ambientesFiltrados = ambientes;
     }
-    
-    useEffect(() => {
-        Api
-            .get('/ambientes')
-            .then((res) => setAmbientes(res.data))
-            .catch((err) => {
-                console.error('Erro inesperado!' + err);
-            });
-    }, []);
+  } else {
+    ambientesFiltrados = ambientes;
+  }
 
-    return ( 
-        <>
-            <Header />
-            <AmbienteCard items={ambientesFiltrados} />
-            <Footer />
-        </>
-    );
+  useEffect(() => {
+    Api
+      .get('/ambientes')
+      .then((res) => setAmbientes(res.data))
+      .catch((err) => {
+        console.error('Erro inesperado!' + err);
+      });
+  }, []);
+
+  return (
+    <>
+      <Header />
+      <AmbienteCard items={ambientesFiltrados} />
+      <Footer />
+    </>
+  );
 }

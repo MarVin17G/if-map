@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, React } from 'react';
 import Api from '../../services/api';
 
 import Header from '../../components/header';
@@ -13,7 +13,7 @@ export default function Diretorias () {
             .get('/diretorias')
             .then((res) => setDiretorias(res.data))
             .catch((error) => {
-                console.log("erro" + error);
+                console.log(`erro ${error}`);
             });
     },  []);
     
