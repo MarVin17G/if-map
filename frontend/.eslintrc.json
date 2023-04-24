@@ -12,12 +12,27 @@
     ],
     "parserOptions": {
         "ecmaVersion": "latest",
-        "sourceType": "module"
+        "sourceType": "module", 
+        "ecmaFeatures": {
+            "jsx": true
+        }
     },
     "plugins": [
         "react"
     ],
     "rules": {
-        "linebreak-style": "off"
-    }
+        "linebreak-style": "off",
+        "react/no-typos": "error",
+        "react/no-unused-state": "error", 
+        "no-dupe-class-members": "error",
+        "no-dupe-keys": "error"
+    },
+    "globals": {
+        "process": true
+      },
+      "settings": {
+        "react": {
+          "version": "detect"
+        }
+      }
 }
