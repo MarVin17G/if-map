@@ -1,23 +1,17 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { useSearchParams } from 'react-router-dom';
 
+import getAmbiente from '../../components/functions/getAmbiente';
 import Header from '../../components/header';
 import Footer from '../../components/footer';
-import Api from '../../services/api';
 import './GuiaVideo.css';
 
 export default function GuiaVideo() {
   const [searchParams] = useSearchParams();
-  // eslint-disable-next-line no-unused-vars
-  const [ambiente, setAmbiente] = useState();
-
   const id = searchParams.get('id');
 
-  useEffect(() => {
-    Api
-      .get(`/ambientes/${id}`)
-      .then((res) => setAmbiente(res.data));
-  }, []);
+  // eslint-disable-next-line no-unused-vars
+  const ambiente = getAmbiente(id);
 
   return (
     <div className="guia-video__container">
