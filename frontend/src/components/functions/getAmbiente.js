@@ -8,7 +8,7 @@ export default function useGetAmbientes(id) {
     Api
       .get(`/ambientes/${id}`)
       .then((res) => setAmbiente(res.data));
-  }, []);
+  }, [id]);
 
   return ambiente;
 }
