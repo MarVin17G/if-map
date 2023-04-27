@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import Api from '../../services/api';
 
-function getAmbientes(id) {
+export default function useGetAmbientes(id) {
   const [ambiente, setAmbiente] = useState();
 
   useEffect(() => {
@@ -12,5 +12,3 @@ function getAmbientes(id) {
 
   return ambiente;
 }
-
-export default getAmbientes();

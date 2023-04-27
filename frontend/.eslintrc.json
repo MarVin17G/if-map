@@ -6,7 +6,9 @@
     },
     "extends": [
         "plugin:react/recommended",
-        "airbnb"
+        "airbnb",
+        "eslint:recommended",
+        "plugin:react-hooks/recommended"
     ],
     "overrides": [
     ],
@@ -18,7 +20,8 @@
         }
     },
     "plugins": [
-        "react"
+        "react",
+        "react-hooks"
     ],
     "rules": {
         "linebreak-style": "off",
