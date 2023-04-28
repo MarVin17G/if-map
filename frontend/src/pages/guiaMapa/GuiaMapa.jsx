@@ -19,7 +19,7 @@ export default function GuiaMapa() {
     Api
       .get(`/ambientes/${id}`)
       .then((res) => setAmbiente(res.data));
-  }, []);
+  }, [id]);
 
   return (
     <div className="guia-mapa__container">

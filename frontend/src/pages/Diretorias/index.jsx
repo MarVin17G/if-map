@@ -1,18 +1,12 @@
-import { useEffect, useState, React } from 'react';
-import Api from '../../services/api';
+import React from 'react';
 
 import Header from '../../components/header';
 import DiretoriaCard from '../../components/diretoriaCard';
 import Footer from '../../components/footer';
+import useGetDiretorias from '../../components/functions/getDiretorias';
 
 export default function Diretorias() {
-  const [diretorias, setDiretorias] = useState([]);
-
-  useEffect(() => {
-    Api
-      .get('/diretorias')
-      .then((res) => setDiretorias(res.data));
-  }, []);
+  const diretorias = useGetDiretorias();
 
   return (
     <>
