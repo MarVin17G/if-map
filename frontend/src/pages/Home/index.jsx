@@ -1,20 +1,14 @@
-import React, { useEffect, useState } from 'react';
-import Api from '../../services/api';
+import React from 'react';
 
 import Header from '../../components/header';
 import Footer from '../../components/footer';
 import SearchBar from '../../components/searchBar';
+import useGetDiretoria from '../../components/functions/getDiretorias';
 
 import './style.css';
 
 export default function Home() {
-  const [diretorias, setDiretorias] = useState([]);
-
-  useEffect(() => {
-    Api
-      .get('/diretorias')
-      .then((res) => setDiretorias(res.data));
-  }, []);
+  const diretorias = useGetDiretoria();
 
   return (
     <>
